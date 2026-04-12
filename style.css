@@ -1,0 +1,266 @@
+/* =============================================
+   SHARAD KUMAR PORTFOLIO — GLOBAL STYLESHEET
+   ============================================= */
+
+
+/* ---------------------------------------------
+   1. RESET & BASE
+   --------------------------------------------- */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #e6e6e6;
+    background: radial-gradient(circle at top, #0b2233, #050d14);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ---------------------------------------------
+   2. LAYOUT
+   --------------------------------------------- */
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 25px 12px 10px 12px;
+}
+
+.header {
+    position: relative;
+}
+
+
+/* ---------------------------------------------
+   3. TYPOGRAPHY
+   --------------------------------------------- */
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.tagline {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #d4af37;
+    margin: 0;
+    line-height: 0.5;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* ---------------------------------------------
+   4. PROFILE PHOTO
+   Profile pic: visible on desktop (index.html only).
+   Hidden on tablet and mobile (all orientations).
+   Sub-pages keep the <img> commented out in HTML.
+   --------------------------------------------- */
+
+.profile-pic {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #d4af37;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+}
+
+
+/* ---------------------------------------------
+   5. NAVIGATION LINKS
+   --------------------------------------------- */
+
+.home-link {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    color: #4da3ff;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 9999;
+}
+
+.back-to-main {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.back-to-main a {
+    color: #4da3ff;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.back-to-main a:hover {
+    text-decoration: underline;
+}
+
+.disabled-link {
+    color: #4da3ff;
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: default;
+}
+
+
+/* ---------------------------------------------
+   6. CARDS & GRID (sub-pages)
+   --------------------------------------------- */
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 10px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 260px;
+}
+
+.card h3 {
+    color: #d4af37;
+    font-size: 16px;
+    margin: 0;
+}
+
+.card ul {
+    padding-left: 18px;
+    margin: 10px 0 0 0;
+    min-height: 126px;
+    max-height: 126px;
+    overflow: hidden;
+}
+
+.card ul li {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #cfcfcf;
+    margin-bottom: 6px;
+}
+
+.mandate {
+    font-size: 12px;
+    color: #d4af37;
+    font-style: italic;
+    margin-top: 3px;
+    margin-bottom: 6px;
+}
+
+.narrative {
+    font-size: 13px;
+    color: #d1d5db;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    min-height: 40px;
+}
+
+.outcome {
+    font-size: 12px;
+    margin-top: 12px;
+    padding-top: 0;
+}
+
+.outcome strong {
+    color: #22c55e;
+}
+
+.extra-points {
+    padding-left: 18px;
+    margin-top: 0px;
+}
+
+.extra-points li {
+    color: #cfcfcf;
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.section-block {
+    position: relative;
+    padding-bottom: 0;
+}
+
+/* ---------------------------------------------
+   10. RESPONSIVE — MOBILE & TABLET PORTRAIT/LANDSCAPE
+       Profile pic hidden below 1025px (set in section 4)
+   --------------------------------------------- */
+
+@media (max-width: 1024px) {
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .tagline {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        color: #d4af37;
+        margin: 0;
+    }
+    .card {
+        padding: 14px;
+    }
+    .extra-points li {
+        font-size: 12px;
+    }
+ }
+
+.letterhead {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.header-center {
+    flex: 1;
+    text-align: center;
+}
+
+.side-block {
+    width: 110px;
+    height: 80px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

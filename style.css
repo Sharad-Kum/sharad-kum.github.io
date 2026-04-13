@@ -258,6 +258,7 @@ h1 {
 
 .side-block {
     width: 110px;
+    min-width: 110px;
     height: 80px;
     flex-shrink: 0;
     display: flex;

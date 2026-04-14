@@ -269,7 +269,13 @@
         margin-top: 12px;
     }
 }
-
+@media (max-width: 768px) and (orientation: portrait) {
+    .item-desc {
+        display: block;
+        -webkit-line-clamp: unset;
+        overflow: visible;
+    }
+}
 </style>
 </head>
 

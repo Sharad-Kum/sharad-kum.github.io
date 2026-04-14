@@ -276,6 +276,15 @@
         overflow: visible;
     }
 }
+@media (max-width: 768px) and (orientation: portrait) {
+    .profile-pic { display: none; }
+    .side-block { display: none; }
+    .box {
+        min-width: auto;
+        max-width: auto;
+        flex: 0 0 calc(50% - 10px);
+    }
+}
 </style>
 </head>
 

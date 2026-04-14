@@ -37,6 +37,7 @@
     justify-content: center;
     gap: 10px;
     margin-bottom: 5px;
+    flex-wrap: wrap;   /* ADD THIS */
 }
 
 .box {
@@ -100,7 +101,7 @@
         max-width: 760px;
     }
     .box {
-        flex: 0 0 172px;
+        flex: 0 0 172px
         font-size: 11px;
         padding: 6px;
     }
@@ -115,7 +116,7 @@
         max-width: 380px;
     }
     .box {
-        flex: 0 0 172px;
+        flex: 0 0 calc(50% - 10px);   /* CHANGE THIS — was: flex: 0 0 172px */
         font-size: 11px;
         padding: 6px;
     }
@@ -299,8 +300,16 @@
 <p class="intro">I partner with enterprise leaders to drive go-to-market strategy, shape AI and cloud enabled systems, modernize processes, drive techno-commercial proposals, establish scalable delivery and enable workforce transformation for measurable outcomes.</p>
 
 <div class="impact">
-<div class="impact-title">IMPACT SNAPSHOT</div>
-<div class="impact-row">
+  <div class="impact-title">IMPACT SNAPSHOT</div>
+  <div class="impact-grid">            ← ADD
+    <div class="impact-row">
+      ... 5 boxes ...
+    </div>
+    <div class="impact-row">
+      ... 4 boxes ...
+    </div>
+  </div>                               ← ADD
+</div>
     <div class="box"><b>$300 M</b> Enterprise SBU Rebuild</div>
     <div class="box"><b>425+</b> Scaled Delivery Portfolio</div>
     <div class="box"><b>$20 M</b> Practice Incubated</div>

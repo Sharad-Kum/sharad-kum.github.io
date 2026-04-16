@@ -226,14 +226,18 @@
 
 /* Mobile landscape */
 @media (max-width: 768px) and (orientation: landscape) {
+    .impact-grid { width: 100%; }
     .box {
-        flex: 0 0 172px;
+        width: calc(25% - 10px) !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        flex: 0 0 calc(25% - 10px) !important;
         font-size: 11px;
         padding: 6px;
     }
-    .box b {
-        font-size: 14px;
-    }
+    .box b { font-size: 14px; }
+    .grid { grid-template-columns: repeat(3, 1fr); }
+    .item-desc { display: block; -webkit-line-clamp: unset; overflow: visible; }
 }
 
 /* Tablet and below */

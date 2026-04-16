@@ -43,6 +43,7 @@
     width: 185px;
     min-width: 185px;
     max-width: 185px;
+    box-sizing: border-box;  /* ADD THIS LINE */
     border: 1px solid #a88c3a;
     background-color: #333;
     border-radius: 10px;
@@ -271,7 +272,16 @@
         overflow: visible;
     }
 }
-
+@media (max-width: 768px) and (orientation: landscape) {
+    .letterhead { margin-bottom: 10px; }
+    .header-center { padding-top: 8px; }
+    .grid { grid-template-columns: repeat(3, 1fr); }
+    .item-desc {
+        display: block;
+        -webkit-line-clamp: unset;
+        overflow: visible;
+    }
+}
 </style>
 </head>
 

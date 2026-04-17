@@ -248,8 +248,9 @@
 /* Mobile portrait — all fixes consolidated */
 @media (max-width: 768px) and (orientation: portrait) {
 .impact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 }
 

@@ -41,7 +41,7 @@
 }
 
 .box {
-    width: 185px;
+    width: 100%;
     box-sizing: border-box;
     border: 1px solid #a88c3a;
     background-color: #333;
@@ -203,8 +203,6 @@
 @media (min-width: 1025px) {
 
     .intro { margin: -20px auto 5px auto; }
-    .impact-row { flex-wrap: nowrap; }
-
     .box {
         height: 55px;
         padding: 8px 10px;
@@ -218,6 +216,16 @@
         line-height: 1.1;
         margin-bottom: 2px;
     }
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+/* Start second row from column 2 → centers 4 boxes */
+.impact-grid .box:nth-child(6) {
+    grid-column-start: 2;
+}
 }
 
 /* Tablet landscape */
@@ -285,23 +293,25 @@
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 12px;
     }
+    
+.box {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    flex: unset;
+    font-size: 12px;
+    padding: 8px 6px;
+    min-height: 52px;
+    line-height: 1.25;   /* ← ADD THIS */
+}
 
-    .impact-row {
-        display: contents;
+    .impact-grid .box:last-child {
+    text-align: center;
     }
-
-    .box {
-        width: 100%;
-        min-width: 0;
-        max-width: none;
-        flex: unset;
-        font-size: 11px;
-        padding: 6px;
-    }
-
-    .box b { font-size: 14px; }
+    
+    .box b { font-size: 15px; }
 
     .impact-grid .box:last-child {
         grid-column: span 2;
@@ -346,20 +356,16 @@
 <div class="impact">
 <div class="impact-title">IMPACT SNAPSHOT</div>
 <div class="impact-grid">
-<div class="impact-row">
-    <div class="box"><b>$300 M</b> Enterprise SBU Rebuild</div>
-    <div class="box"><b>425+</b> Scaled Delivery Portfolio</div>
-    <div class="box"><b>$20 M</b> Practice Incubated</div>
-    <div class="box"><b>75%+</b> Hit-to-Win</div>
-    <div class="box"><b>6000+</b> Apps Modernized</div>
-</div>
-<div class="impact-row">
-    <div class="box"><b>9</b> Geographies Developed</div>
-    <div class="box"><b>$13 M</b> Portfolio ACV</div>
-    <div class="box"><b>Salvaged</b> Solution & Delivery Red-Flags</div>
-    <div class="box"><b>$47 M</b> P&amp;L Ownership</div>
-</div>
-</div>
+<div class="box"><b>$300 M</b> Enterprise SBU Rebuild</div>
+<div class="box"><b>425+</b> Scaled Delivery Portfolio</div>
+<div class="box"><b>$20 M</b> Practice Incubated</div>
+<div class="box"><b>75%+</b> Hit-to-Win</div>
+<div class="box"><b>6000+</b> Apps Modernized</div>
+
+<div class="box"><b>9</b> Geographies Developed</div>
+<div class="box"><b>$13 M</b> Portfolio ACV</div>
+<div class="box"><b>Salvaged</b> Solution & Delivery Red-Flags</div>
+<div class="box"><b>$47 M</b> P&amp;L Ownership</div>
 </div>
 
 <div class="grid">

@@ -247,27 +247,16 @@
 
 /* Mobile portrait — all fixes consolidated */
 @media (max-width: 768px) and (orientation: portrait) {
-.impact-row {
-    width: 100%;
-}
-    .profile-pic { display: none; }
-    .side-block { display: none; }
-    .tagline { line-height: 1.3; }
-    .intro { margin: 8px auto 5px auto; }
-    .impact-grid { width: 100%; max-width: 390px; margin: 0 auto; }
+    .impact-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
     .box {
         width: calc(50% - 10px);
-        min-width: 0;
-        max-width: none;
-        flex: 0 0 50%;
-        font-size: 11px;
-        padding: 6px;
-    }
-    .box b { font-size: 14px; }
-    .item-desc {
-        display: block;
-        -webkit-line-clamp: unset;
-        overflow: visible;
+        flex: 0 0 calc(50% - 10px);
     }
 }
 @media (min-width: 769px) {

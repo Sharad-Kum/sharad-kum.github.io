@@ -265,3 +265,9 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+@media (max-width: 768px) and (orientation: portrait) {
+    .tagline {
+        line-height: 1.2;
+        margin-top: 4px;
+    }
+}

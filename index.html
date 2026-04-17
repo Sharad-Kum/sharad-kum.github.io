@@ -93,7 +93,7 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    gap: 20px;
     margin-top: -20px;
     padding-top: 5px;
 }
@@ -201,7 +201,9 @@
 
 /* Desktop: restore negative margin, force 5+4 */
 @media (min-width: 1025px) {
-
+    .grid {
+        align-items: start;
+    }
     .intro { margin: -20px auto 5px auto; }
     .box {
         height: 55px;
@@ -210,7 +212,6 @@
         line-height: 1.2;
         overflow: hidden;
     }
-
     .box b {
         font-size: 15px;
         line-height: 1.1;

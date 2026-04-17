@@ -18,27 +18,7 @@
 <link rel="stylesheet" href="style.css">
 
 <style>
-
-.impact {<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="Sharad Kumar | Operating at the intersection of Go-to-market, Technology & Delivery" />
-<meta property="og:description" content="Enterprise leader driving GTM strategy, Technology & Operate soultions, and building high-performance global teams delivering measurable business outcomes." />
-<meta name="description" content="Specializing in AI, Cloud, and Digital Transformation." />
-<meta property="og:image" content="https://Shark280266.github.io/image.jpg" />
-<meta property="og:url" content="https://Shark280266.github.io/" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Sharad Kumar Portfolio" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="author" content="Sharad Kumar" />
-<meta property="article:published_time" content="2026-03-31T00:00:00Z" />
-<title>Sharad Kumar | Portfolio - GTM Strategy, Solutions (Techno Comemrcial) & Delivery</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
-<style>
+/* IMPACT SNAPSHOT — index.html only */
 
 .impact {
     max-width: 1000px;
@@ -57,12 +37,13 @@
     justify-content: center;
     gap: 10px;
     margin-bottom: 5px;
-    flex-wrap: wrap;
+    flex-wrap: wrap;   /* ADD THIS */
 }
 
 .box {
     width: 185px;
-    box-sizing: border-box;  /* ADD THIS LINE */
+    min-width: 185px;
+    max-width: 185px;
     border: 1px solid #a88c3a;
     background-color: #333;
     border-radius: 10px;
@@ -89,6 +70,71 @@
     padding-bottom: 5px;
 }
 
+/* Desktop: 5+4 */
+/* Tablet landscape: 5+4 */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    .impact-grid {
+        max-width: 930px;
+    }
+    .box {
+        flex: 0 0 172px;
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* Tablet portrait: 4+4+1 */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+    .impact-grid {
+        max-width: 760px;
+    }
+    .box {
+        flex: 0 0 172px;
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* Mobile landscape: 4+4+1 */
+@media (max-width: 768px) and (orientation: landscape) {
+    .impact-grid {
+        max-width: 760px;
+    }
+    .box {
+        flex: 0 0 172px
+        font-size: 11px;
+        padding: 6px;
+    }
+    .box b {
+        font-size: 14px;
+    }
+}
+
+/* Mobile portrait: 2+2 */
+@media (max-width: 768px) and (orientation: portrait) {
+    .profile-pic { display: none; }
+    .side-block { display: none; }
+    .tagline { line-height: 1.3; }
+    .intro { margin: 8px auto 5px auto; }
+    .impact-grid { width: 100%; }
+    .box {
+        width: calc(50% - 10px);
+        min-width: auto;
+        max-width: auto;
+        flex: 0 0 calc(50% - 10px);
+        font-size: 11px;
+        padding: 6px;
+    }
+    .box b {
+        font-size: 14px;
+    }
+    .item-desc {
+        display: block;
+        -webkit-line-clamp: unset;
+        overflow: visible;
+    }
+}
+
 .more-link {
     position: absolute;
     right: 0;
@@ -105,7 +151,7 @@
 .intro {
     text-align: center;
     max-width: 1100px;
-    margin: 8px auto 5px auto;
+    margin: -20px auto 5px auto;
     font-size: 14px;
     line-height: 1.2;
 }
@@ -218,456 +264,43 @@
     pointer-events: none;
 }
 
-/* Desktop: force 5+4 no wrapping */
-@media (min-width: 1025px) {
-    .impact-row {
-        flex-wrap: nowrap;
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .bottom {
+        display: block;
+        margin-top: 30px;
+    }
+    .engage {
+        margin-top: 15px;
+    }
+    .tagline + .intro {
+        margin-top: 12px;
     }
 }
-
-/* Tablet landscape */
-@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
-    .box {
-        flex: 0 0 172px;
-        font-size: 12px;
-        padding: 8px;
-    }
-}
-
-/* Tablet portrait */
-@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
-    .box {
-        flex: 0 0 172px;
-        font-size: 12px;
-        padding: 8px;
-    }
-}
-
-/* Mobile landscape */
-@media (max-width: 768px) and (orientation: landscape) {
-    .impact-grid { width: 100%; max-width: 390px; margin: 0 auto; }
-    .box {
-        width: calc(25% - 10px);
-        min-width: 0;
-        max-width: none;
-        flex: 0 0 calc(25% - 10px);
-        font-size: 11px;
-        padding: 6px;
-    }
-    .box b { font-size: 14px; }
-    .grid { grid-template-columns: repeat(3, 1fr); }
-    .item-desc { display: block; -webkit-line-clamp: unset; overflow: visible; }
-}
-
-/* Tablet and below */
-@media (max-width: 1024px) and (orientation: portrait) {
-    .grid { grid-template-columns: 1fr; }
-    .bottom { display: block; margin-top: 30px; }
-    .engage { margin-top: 15px; }
-}
-
-/* Mobile portrait — all fixes consolidated */
 @media (max-width: 768px) and (orientation: portrait) {
-    .profile-pic { display: none; }
-    .side-block { display: none; }
-    .tagline { line-height: 1.3; }
-    .intro { margin: 8px auto 5px auto; }
-    .impact-grid { width: 100%; max-width: 390px; margin: 0 auto; }
-    .box {
-        width: calc(50% - 10px);
-        min-width: 0;
-        max-width: none;
-        flex: 0 0 calc(50% - 10px);
-        font-size: 11px;
-        padding: 6px;
-    }
-    .box b { font-size: 14px; }
     .item-desc {
         display: block;
         -webkit-line-clamp: unset;
         overflow: visible;
     }
 }
-@media (min-width: 769px) {
-    .intro { margin: -20px auto 5px auto; }
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<div class="letterhead">
-    <div class="side-block">
-        <img src="image.jpg" alt="Sharad Kumar" class="profile-pic">
-    </div>
-    <div class="header-center">
-        <h1>SHARAD KUMAR</h1>
-        <p class="tagline">Operating at the intersection of Markets, Technology and Delivery</p>
-    </div>
-    <div class="side-block">
-        <svg viewBox="0 0 120 120" width="100" height="100">
-    <defs>
-        <path id="bottom-arc" d="M 15,60 A 45,45 0 0,0 105,60"/>
-    </defs>
-    <image href="logo.png" x="20" y="15" width="80" height="80" style="filter: brightness(2.5) saturate(3) hue-rotate(5deg);"/>
-            <text font-size="11" fill="#d4af37" font-family="Segoe UI, sans-serif" font-weight="500" letter-spacing="2">
-                <textPath href="#bottom-arc">Addicted to Results</textPath>
-            </text>
-        </svg>
-    </div>
-</div>
-<p class="intro">I partner with enterprise leaders to drive go-to-market strategy, shape AI and cloud enabled systems, modernize processes, drive techno-commercial proposals, establish scalable delivery and enable workforce transformation for measurable outcomes.</p>
-
-<div class="impact">
-<div class="impact-title">IMPACT SNAPSHOT</div>
-<div class="impact-grid">
-<div class="impact-row">
-    <div class="box"><b>$300 M</b> Enterprise SBU Rebuild</div>
-    <div class="box"><b>425+</b> Scaled Delivery Portfolio</div>
-    <div class="box"><b>$20 M</b> Practice Incubated</div>
-    <div class="box"><b>75%+</b> Hit-to-Win</div>
-    <div class="box"><b>6000+</b> Apps Modernized</div>
-</div>
-<div class="impact-row">
-    <div class="box"><b>9</b> Geographies Developed</div>
-    <div class="box"><b>$13 M</b> Portfolio ACV</div>
-    <div class="box"><b>Salvaged</b> Solution & Delivery Red-Flags</div>
-    <div class="box"><b>$47 M</b> P&amp;L Ownership</div>
-</div>
-</div>
-</div>
-
-<div class="grid">
-
-<!-- GTM -->
-<div class="section-block">
-<div class="section-title">GTM & GROWTH</div>
-<a href="gtm.html" class="more-link">more...</a>
-<div class="item"><i class="fa-solid fa-magnifying-glass icon"></i><div><div class="item-title">Market & Competitive Intelligence</div><div class="item-desc">Conducted market (geography and regional) and competitive analysis to define ICPs, map stakeholders, and drive proposition alignment.</div></div></div>
-<div class="item"><i class="fa-solid fa-handshake icon"></i><div><div class="item-title">Sales Strategy & Pursuit Leadership</div><div class="item-desc">Drove end-to-end RFI/RFP/RFQ cycles, proposal defense, negotiations, and contract structuring to win $1M+ deals achieving a 75%+ win rate.</div></div></div>
-<div class="item"><i class="fa-solid fa-diagram-project icon"></i><div><div class="item-title">Partnerships & Alliances</div><div class="item-desc">Built global and regional alliances leveraging partner ecosystems to deliver solutions (incl. SaaS) with flexible revenue-sharing models</div></div></div>
-<div class="item"><i class="fa-solid fa-bullhorn icon"></i><div><div class="item-title">Brand Positioning</div><div class="item-desc">Enabled GTM through solution and technical readiness, generated leads, and built thought leadership via forums and analyst engagements.</div></div></div>
-</div>
-
-<!-- SOLUTION -->
-<div class="section-block">
-<div class="section-title">SOLUTION</div>
-<a href="solution.html" class="more-link">more...</a>
-<div class="item"><i class="fa-solid fa-cloud icon"></i><div><div class="item-title">Cloud & SaaS Transformation</div><div class="item-desc">Architected and operationalized automated transformation and migration programs leveraging the 7R principles.</div></div></div>
-<div class="item"><i class="fa-solid fa-brain icon"></i><div><div class="item-title">AI-Driven Engineering</div><div class="item-desc">Embedded consulting-led machine learning and predictive modeling into the SDLC to enable automated pattern analysis and drive higher accuracy.</div></div></div>
-<div class="item"><i class="fa-solid fa-lock icon"></i><div><div class="item-title">DevOps & Security</div><div class="item-desc">Designed end-to-end CI/CD, virtualization, and deployment automation solutions, improving release velocity and operational resilience.</div></div></div>
-<div class="item"><i class="fa-solid fa-chart-line icon"></i><div><div class="item-title">Data Analytics & Observability</div><div class="item-desc">Established BI-led engineering and observability frameworks to drive smarter decisions and improve performance with measurable outcomes.</div></div></div>
-</div>
-
-<!-- DELIVERY -->
-<div class="section-block">
-<div class="section-title">DELIVERY</div>
-<a href="delivery.html" class="more-link">more...</a>
-<div class="item"><i class="fa-solid fa-check-circle icon"></i><div><div class="item-title">Agile & Scrum Execution</div><div class="item-desc">Led global teams with Agile governance, in-sprint automation, and tiered regression to accelerate CI/CD, ensuring predictable quality at scale.</div></div></div>
-<div class="item"><i class="fa-solid fa-users icon"></i><div><div class="item-title">Stakeholder Management</div><div class="item-desc">Governed global multimillion-dollar programs through real-time dashboards and SLA tracking via balanced scorecards, driving clarity.</div></div></div>
-<div class="item"><i class="fa-solid fa-shield icon"></i><div><div class="item-title">Quality & Risk Management</div><div class="item-desc">Implemented predictive models for risk and stability scoring, defect prediction, and impact-based prioritization, improving release stability.</div></div></div>
-<div class="item"><i class="fa-solid fa-globe icon"></i><div><div class="item-title">Global Team Leadership</div><div class="item-desc">Built and scaled delivery CoEs (federated and non-federated), driving governance, process maturity, and enterprise-scale delivery excellence.</div></div></div>
-</div>
-
-</div>
-
-<div class="bottom">
-
-<div>
-<div class="section-title">THOUGHT LEADERSHIP & RECOGNITION</div>
-<ul class="compact-list">
-<li><i class="fa-solid fa-pen-nib"></i><span><strong>Author & Co-Author</strong>: DevOps whitepapers, Testing Practitioner Handbook, and playbooks on APM, governance, and multi-vendor operations and process. </span></li>
-<li><i class="fa-solid fa-certificate"></i><span><strong>Certified SME</strong>: SMACT (Social, Mobile, Analytics, Cloud, and Internet of Things), Digital Strategy and Transformation, Cloud and API Gateway</span></li>
-<li><i class="fa-solid fa-microphone"></i><span><strong>Speaker & Jury Member</strong>: Engaged at national and international forums on AI, DevOps and transformation; Member, Asia Cloud Computing Association.</span></li>
-<li><i class="fa-solid fa-trophy"></i><span><strong>Recognized</strong>: Client certificate - QA workshop South Korea, Laying process foundation for offshore delivery; Best Business Operator; multiple ACE awards.</span></li>
-</ul>
-</div>
-
-<div class="engage">
-<div class="section-title">ENGAGE WITH ME</div>
-<div class="engage-icons">
-
-<a href="mailto:sharad.kumar.ms@gmail.com?subject=Connect with Sharad" class="engage-item">
-    <i class="fa-solid fa-envelope"></i>
-    <span>E-mail</span>
-</a>
-
-<a href="https://www.linkedin.com/in/sharad-kumar-11264247" target="_blank" class="engage-item">
-    <i class="fa-brands fa-linkedin"></i>
-    <span>LinkedIn</span>
-</a>
-
-<a href="https://calendly.com/sharad-kumar-ms/strategic-connect" target="_blank" class="engage-item">
-    <i class="fa-solid fa-calendar-days"></i>
-    <span>Book my Calendar</span>
-</a>
-
-</div>
-</div>
-
-</div>
-
-</div>
-
-</body>
-</html>
-    max-width: 1000px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-.impact-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.impact-row {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 5px;
-    flex-wrap: wrap;
-}
-
-.box {
-    : 185px;
-    box-sizing: border-box;  /* ADD THIS LINE */
-    border: 1px solid #a88c3a;
-    background-color: #333;
-    border-radius: 10px;
-    padding: 6px 6px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.25;
-    color: white;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.box b {
-    display: block;
-    color: #d4af37;
-    font-size: 16px;
-    margin-bottom: 4px;
-}
-
-.section-title {
-    border-bottom: 1px solid #d4af37;
-    padding-bottom: 5px;
-}
-
-.more-link {
-    position: absolute;
-    right: 0;
-    top: 20px;
-    font-size: 12px;
-    color: #4da3ff;
-    text-decoration: none;
-}
-
-.more-link:hover {
-    text-decoration: underline;
-}
-
-.intro {
-    text-align: center;
-    max-: 1100px;
-    margin: 8px auto 5px auto;
-    font-size: 14px;
-    line-height: 1.2;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    margin-top: -20px;
-    padding-top: 5px;
-}
-
-.item {
-    display: flex;
-    margin-bottom: 14px;
-    min-height: 78px;
-}
-
-.icon {
-    color: #d4af37;
-    margin-right: 10px;
-    margin-top: 3px;
-    font-size: 14px;
-}
-
-.item-title {
-    color: #d4af37;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.item-desc {
-    font-size: 13px;
-    color: #cfcfcf;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.bottom {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    margin-top: -14px;
-}
-
-.compact-list {
-    list-style: none;
-    padding: 0;
-}
-
-.compact-list li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 8px;
-    font-size: 13px;
-    color: #cfcfcf;
-}
-
-.compact-list li span {
-    color: #cfcfcf;
-}
-
-.compact-list i {
-    color: #d4af37;
-    margin-right: 8px;
-}
-
-.compact-list strong {
-    color: #d4af37;
-}
-
-.engage-icons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 15px;
-}
-
-.engage-icons a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-}
-
-.engage-icons a:link,
-.engage-icons a:visited,
-.engage-icons a:hover,
-.engage-icons a:active {
-    text-decoration: none;
-}
-
-.engage-icons a i {
-    : 20px;
-    text-align: center;
-    font-size: 20px;
-}
-
-.engage-icons a span {
-    color: #ffffff;
-    font-size: 13px;
-    opacity: 1;
-    margin-top: 4px;
-}
-
-.disabled {
-    color: #777;
-    pointer-events: none;
-}
-
-/* Desktop: force 5+4 no wrapping */
-@media (min-: 1025px) {
-    .impact-row {
-        flex-wrap: nowrap;
-    }
-}
-
-/* Tablet landscape */
-@media (min-: 769px) and (max-: 1024px) and (orientation: landscape) {
-    .box {
-        flex: 0 0 172px;
-        font-size: 12px;
-        padding: 8px;
-    }
-}
-
-/* Tablet portrait */
-@media (min-: 769px) and (max-: 1024px) and (orientation: portrait) {
-    .box {
-        flex: 0 0 172px;
-        font-size: 12px;
-        padding: 8px;
-    }
-}
-
-/* Mobile landscape */
-@media (max-: 768px) and (orientation: landscape) {
-    .impact-grid { width: 100%; max-width: 390px; margin: 0 auto; }
-    .box {
-        width: calc(25% - 10px);
-        min-width: 0;
-        max-width: none;
-        flex: 0 0 calc(25% - 10px);
-        font-size: 11px;
-        padding: 6px;
-    }
-    .box b { font-size: 14px; }
-    .grid { grid-template-columns: repeat(3, 1fr); }
-    .item-desc { display: block; -webkit-line-clamp: unset; overflow: visible; }
-}
-
-/* Tablet and below */
-@media (max-width: 1024px) and (orientation: portrait) {
-    .grid { grid-template-columns: 1fr; }
-    .bottom { display: block; margin-top: 30px; }
-    .engage { margin-top: 15px; }
-}
-
-/* Mobile portrait — all fixes consolidated */
 @media (max-width: 768px) and (orientation: portrait) {
-.impact-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-.box {
-    width: calc(50% - 6px);
-    flex: 0 0 calc(50% - 6px);
-    padding: 8px 6px;
+    .profile-pic { display: none; }
+    .side-block { display: none; }
+    .tagline { line-height: 1.3; }
+    .box {
+        width: calc(50% - 10px);
+        min-width: auto;
+        max-width: auto;
+        flex: 0 0 calc(50% - 10px);
     }
-}
-.letterhead .side-block {
-    display: none;
-}
-.letterhead {
-    margin-bottom: 10px;
-    margin-top: 12px;
-}
-
-.intro {
-    margin-top: 12px;
-}
-.profile-pic {
-    display: none;
-}
-@media (min-width: 769px) {
-    .intro { margin: -20px auto 5px auto; }
+    .item-desc {
+        display: block;
+        -webkit-line-clamp: unset;
+        overflow: visible;
+    }
 }
 </style>
 </head>
@@ -701,21 +334,22 @@
 <div class="impact">
 <div class="impact-title">IMPACT SNAPSHOT</div>
 <div class="impact-grid">
-
+<div class="impact-row">
     <div class="box"><b>$300 M</b> Enterprise SBU Rebuild</div>
     <div class="box"><b>425+</b> Scaled Delivery Portfolio</div>
     <div class="box"><b>$20 M</b> Practice Incubated</div>
     <div class="box"><b>75%+</b> Hit-to-Win</div>
     <div class="box"><b>6000+</b> Apps Modernized</div>
-
+</div>
+<div class="impact-row">
     <div class="box"><b>9</b> Geographies Developed</div>
     <div class="box"><b>$13 M</b> Portfolio ACV</div>
     <div class="box"><b>Salvaged</b> Solution & Delivery Red-Flags</div>
     <div class="box"><b>$47 M</b> P&amp;L Ownership</div>
-
 </div>
 </div>
-
+</div>
+    
 <div class="grid">
 
 <!-- GTM -->
@@ -747,6 +381,7 @@
 <div class="item"><i class="fa-solid fa-shield icon"></i><div><div class="item-title">Quality & Risk Management</div><div class="item-desc">Implemented predictive models for risk and stability scoring, defect prediction, and impact-based prioritization, improving release stability.</div></div></div>
 <div class="item"><i class="fa-solid fa-globe icon"></i><div><div class="item-title">Global Team Leadership</div><div class="item-desc">Built and scaled delivery CoEs (federated and non-federated), driving governance, process maturity, and enterprise-scale delivery excellence.</div></div></div>
 </div>
+
 
 </div>
 

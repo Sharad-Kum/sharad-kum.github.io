@@ -278,16 +278,35 @@
     .profile-pic { display: none; }
     .side-block { display: none; }
     .tagline { line-height: 1.3; }
-    .impact-grid { width: 100%; max-width: 390px; margin: 0 auto; }
+
+    .impact-grid {
+        width: 100%;
+        max-width: 390px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .impact-row {
+        display: contents;
+    }
+
     .box {
-        width: calc(50% - 10px);
+        width: 100%;
         min-width: 0;
         max-width: none;
-        flex: 0 0 calc(50% - 10px);
+        flex: unset;
         font-size: 11px;
         padding: 6px;
     }
+
     .box b { font-size: 14px; }
+
+    .impact-grid .box:last-child {
+        grid-column: span 2;
+    }
+
     .item-desc {
         display: block;
         -webkit-line-clamp: unset;

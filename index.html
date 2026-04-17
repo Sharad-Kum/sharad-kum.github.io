@@ -247,8 +247,8 @@
 
 /* Mobile portrait — all fixes consolidated */
 @media (max-width: 768px) and (orientation: portrait) {
-    .impact-row {
-    display: contents;
+.impact-row {
+    width: 100%;
 }
     .profile-pic { display: none; }
     .side-block { display: none; }
@@ -259,7 +259,7 @@
         width: calc(50% - 10px);
         min-width: 0;
         max-width: none;
-        flex: 0 0 calc(50% - 10px);
+        flex: 0 0 50%;
         font-size: 11px;
         padding: 6px;
     }
@@ -305,19 +305,18 @@
 <div class="impact">
 <div class="impact-title">IMPACT SNAPSHOT</div>
 <div class="impact-grid">
-<div class="impact-row">
+
     <div class="box"><b>$300 M</b> Enterprise SBU Rebuild</div>
     <div class="box"><b>425+</b> Scaled Delivery Portfolio</div>
     <div class="box"><b>$20 M</b> Practice Incubated</div>
     <div class="box"><b>75%+</b> Hit-to-Win</div>
     <div class="box"><b>6000+</b> Apps Modernized</div>
-</div>
-<div class="impact-row">
+
     <div class="box"><b>9</b> Geographies Developed</div>
     <div class="box"><b>$13 M</b> Portfolio ACV</div>
     <div class="box"><b>Salvaged</b> Solution & Delivery Red-Flags</div>
     <div class="box"><b>$47 M</b> P&amp;L Ownership</div>
-</div>
+
 </div>
 </div>
 

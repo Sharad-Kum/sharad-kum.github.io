@@ -111,7 +111,17 @@
 }
 
 /* Mobile portrait: 2+2 */
-@media (max-width: 768px) and (orientation: portrait) {
+@media (max-width: 768px) and (orientation: portrait) 
+    @media (max-width: 768px) and (orientation: portrait) {
+    .profile-pic {
+        display: none;
+    }
+
+    .side-block {
+        display: none;
+    }
+}
+    {
     .impact-grid {
         max-width: 380px;
     }

@@ -203,18 +203,33 @@
    TABLET LANDSCAPE: 769px - 1024px landscape
    ============================================= */
 @media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
-    .box {
-        flex: 0 0 172px;
-        font-size: 12px;
-        padding: 8px;
-    }
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-    }
-    .bottom {
-        grid-template-columns: 2fr 1fr;
-    }
+
+    /* LETTERHEAD */
+    .letterhead .side-block { display: flex; }
+    .profile-pic { width: 55px; height: 55px; }
+    h1 { font-size: 18px; }
+    .tagline { font-size: 11px; line-height: 1.3; }
+    .intro { font-size: 11px; margin: 4px auto 4px auto; line-height: 1.3; }
+
+    /* IMPACT — 5+4 rows */
+    .impact { display: block; max-width: 100%; padding: 0 8px; }
+    .impact-row { display: flex; flex-wrap: nowrap; justify-content: center; gap: 6px; margin-bottom: 6px; }
+    .box { flex: 0 0 calc(20% - 6px); min-width: unset; max-width: unset; font-size: 10px; padding: 5px 4px; height: auto; min-height: 40px; box-sizing: border-box; }
+    .box b { font-size: 12px; margin-bottom: 2px; }
+
+    /* GRID — 3 columns */
+    .grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+    /* ITEMS — 2 line descriptions */
+    .icon { display: inline-block; }
+    .item { min-height: unset; cursor: default; margin-bottom: 8px; }
+    .item-desc { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .item-title::before { content: none; }
+    .item-title::after { content: none; }
+
+    /* BOTTOM */
+    .bottom { display: grid; grid-template-columns: 2fr 1fr; margin-top: 12px; }
+    .container { padding: 8px 10px; }
 }
 
 /* =============================================
@@ -240,7 +255,7 @@
     /* ITEMS — full descriptions */
     .icon { display: inline-block; }
     .item { min-height: unset; cursor: default; margin-bottom: 8px; }
-    .item-desc { display: block; -webkit-line-clamp: 2; overflow: hidden; }
+    .item-desc { display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
     .item-title::before { content: none; }
     .item-title::after { content: none; }
 
@@ -274,7 +289,7 @@
     /* ITEMS — full descriptions */
     .icon { display: inline-block; }
     .item { min-height: unset; cursor: default; margin-bottom: 8px; }
-    .item-desc { display: block; -webkit-line-clamp: 2; overflow: hidden; }
+    .item-desc { display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
     .item-title::before { content: none; }
     .item-title::after { content: none; }
 

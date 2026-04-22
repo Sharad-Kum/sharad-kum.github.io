@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:title" content="Sharad Kumar | Operating at the intersection of Go-to-market, Technology & Delivery" />
-<meta property="og:description" content="Enterprise leader driving GTM strategy, Technology & Operate soultions and building high-performance global teams delivering measurable business outcomes." />
+<meta property="og:description" content="Enterprise leader driving GTM strategy, Technology & Operate solutions and building high-performance global teams delivering measurable business outcomes." />
 <meta name="description" content="Specializing in AI, Cloud and Digital Transformation." />
 <meta property="og:image" content="https://Shark280266.github.io/image.jpg" />
 <meta property="og:url" content="https://Shark280266.github.io/" />
@@ -13,32 +13,35 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="author" content="Sharad Kumar" />
 <meta property="article:published_time" content="2026-03-31T00:00:00Z" />
-<title>Sharad Kumar | Portfolio - GTM Strategy, Solutions (Techno Comemrcial) & Delivery</title>
+<title>Sharad Kumar | Portfolio - Growth, Solution & Delivery Leadership</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
+ 
 <style>
-/* IMPACT SNAPSHOT — index.html only */
-
+ 
+/* =============================================
+   IMPACT SNAPSHOT
+   ============================================= */
+ 
 .impact {
     max-width: 1000px;
     margin: 20px auto;
     text-align: center;
 }
-
+ 
 .impact-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
-
+ 
 .impact-row {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-bottom: 5px;
 }
-
+ 
 .box {
     width: 185px;
     min-width: 185px;
@@ -52,37 +55,24 @@
     font-size: 13px;
     line-height: 1.0;
     color: white;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
+ 
 .box b {
     display: block;
     color: #d4af37;
     font-size: 16px;
     margin-bottom: 4px;
 }
-
+ 
 .section-title {
     border-bottom: 1px solid #d4af37;
     padding-bottom: 5px;
 }
-
-.more-link {
-    position: absolute;
-    right: 0;
-    top: 20px;
-    font-size: 12px;
-    color: #4da3ff;
-    text-decoration: none;
-}
-
-.more-link:hover {
-    text-decoration: underline;
-}
-
+ 
 .intro {
     text-align: center;
     max-width: 1100px;
@@ -90,55 +80,246 @@
     font-size: 14px;
     line-height: 1.2;
 }
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    margin-top: -20px;
-    padding-top: 5px;
+ 
+/* =============================================
+   CAROUSEL — SHARED
+   ============================================= */
+ 
+.carousel-section {
+    margin-top: 12px;
+    margin-bottom: 10px;
 }
-
-.item {
+ 
+.carousel-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: 16px;
     display: flex;
-    margin-bottom: 14px;
-    min-height: 78px;
-}
-
-.icon {
-    color: #d4af37;
-    margin-right: 10px;
-    margin-top: 3px;
-    font-size: 14px;
-}
-
-.item-title {
-    color: #d4af37;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.item-desc {
-    font-size: 13px;
-    color: #cfcfcf;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    flex-direction: column;
+    height: 220px;
+    box-sizing: border-box;
     overflow: hidden;
 }
+ 
+.carousel-card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #d4af37;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+ 
+.carousel-card-desc {
+    font-size: 13px;
+    color: #cfcfcf;
+    line-height: 1.5;
+    flex: 1;
+    overflow: hidden;
+}
+ 
+.carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+    padding-top: 6px;
+}
+ 
+.carousel-arrow {
+    background: none;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    color: #d4af37;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+ 
+.carousel-arrow:hover {
+    background: rgba(212, 175, 55, 0.15);
+}
+ 
+.carousel-counter {
+    font-size: 12px;
+    color: #a0a0a0;
+    min-width: 30px;
+    text-align: center;
+}
+ 
+.carousel-more {
+    text-align: right;
+    margin-top: 6px;
+    font-size: 12px;
+}
+ 
+.carousel-more a {
+    color: #4da3ff;
+    text-decoration: none;
+}
+ 
+.carousel-more a:hover {
+    text-decoration: underline;
+}
+ 
+/* =============================================
+   DESKTOP: three carousels side by side
+   ============================================= */
+ 
+.carousel-desktop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+ 
+.carousel-col {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.carousel-col-title {
+    background: rgba(212, 175, 55, 0.85);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    padding: 8px 14px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    text-align: center;
+}
+ 
+/* =============================================
+   MOBILE/TABLET: stacked accordion carousel
+   ============================================= */
+ 
+.carousel-mobile {
+    display: none;
+}
 
+.swipe-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+}
+
+.swipe-sidebar {
+    width: 32px;
+    min-width: 32px;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #d4af37;
+    font-size: 16px;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.swipe-sidebar.left {
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+}
+
+.swipe-sidebar.right {
+    border-radius: 0 8px 8px 0;
+    border-left: none;
+}
+
+.swipe-sidebar:hover {
+    background: rgba(212, 175, 55, 0.25);
+}
+
+.swipe-viewport {
+    flex: 1;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-left: none;
+    border-right: none;
+}
+
+.swipe-track {
+    display: flex;
+    transition: transform 0.35s ease;
+    will-change: transform;
+}
+
+.swipe-card {
+    min-width: 100%;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 16px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    min-height: 180px;
+}
+
+.swipe-card-section {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(212, 175, 55, 0.8);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.swipe-card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #d4af37;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.swipe-card-desc {
+    font-size: 13px;
+    color: #cfcfcf;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.swipe-counter {
+    text-align: center;
+    font-size: 11px;
+    color: #a0a0a0;
+    margin-top: 8px;
+}
+
+.mob-section-content.active {
+    display: block;
+}
+ 
+/* =============================================
+   BOTTOM SECTION
+   ============================================= */
+ 
 .bottom {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
-    margin-top: -14px;
+    margin-top: 10px;
 }
-
+ 
 .compact-list {
     list-style: none;
     padding: 0;
 }
-
+ 
 .compact-list li {
     display: flex;
     align-items: flex-start;
@@ -146,88 +327,72 @@
     font-size: 13px;
     color: #cfcfcf;
 }
-
-.compact-list li span {
-    color: #cfcfcf;
-}
-
+ 
+.compact-list li span { color: #cfcfcf; }
+ 
 .compact-list i {
     color: #d4af37;
     margin-right: 8px;
+    margin-top: 2px;
+    flex-shrink: 0;
 }
-
-.compact-list strong {
-    color: #d4af37;
-}
-
+ 
+.compact-list strong { color: #d4af37; }
+ 
 .engage-icons {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;
+    gap: 20px;
     margin-top: 15px;
+    flex-wrap: wrap;
 }
-
+ 
 .engage-icons a {
     display: flex;
     align-items: center;
     gap: 10px;
     text-decoration: none;
 }
-
+ 
 .engage-icons a:link,
 .engage-icons a:visited,
 .engage-icons a:hover,
-.engage-icons a:active {
-    text-decoration: none;
-}
-
+.engage-icons a:active { text-decoration: none; }
+ 
 .engage-icons a i {
     width: 20px;
     text-align: center;
     font-size: 20px;
 }
-
+ 
 .engage-icons a span {
     color: #ffffff;
     font-size: 13px;
     opacity: 1;
     margin-top: 4px;
 }
-
-.disabled {
-    color: #777;
-    pointer-events: none;
-}
-
+ 
 /* =============================================
-   TABLET LANDSCAPE: mirrors desktop
+   RESPONSIVE
    ============================================= */
+ 
+/* Tablet Landscape — mirrors desktop */
 @media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
-    .letterhead .side-block { display: flex; }
-    .profile-pic { width: 60px; height: 60px; }
-    h1 { font-size: 22px; }
+     h1 { font-size: 22px; }
     .tagline { font-size: 13px; line-height: 1.3; }
     .intro { font-size: 13px; margin: 4px auto 4px auto; line-height: 1.3; }
     .impact { display: block; max-width: 100%; padding: 0 8px; }
     .impact-row { display: flex; flex-wrap: nowrap; justify-content: center; gap: 8px; margin-bottom: 8px; }
     .box { flex: 0 0 calc(20% - 8px); min-width: unset; max-width: unset; font-size: 11px; padding: 6px 4px; height: auto; min-height: 45px; box-sizing: border-box; }
     .box b { font-size: 13px; margin-bottom: 2px; }
-    .grid { grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 8px; }
-    .icon { display: inline-block; }
-    .item { min-height: unset; cursor: default; margin-bottom: 10px; }
-    .item-desc { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-    .item-title { font-size: 13px; }
-    .item-title::before { content: none; }
-    .item-title::after { content: none; }
-    .bottom { display: grid; grid-template-columns: 2fr 1fr; margin-top: 16px; }
+    .carousel-desktop { gap: 14px; }
+    .carousel-card { height: 200px; }
+    .bottom { grid-template-columns: 2fr 1fr; margin-top: 12px; }
     .container { padding: 10px 12px; }
 }
-
-/* =============================================
-   MOBILE LANDSCAPE + TABLET PORTRAIT: shared
-   ============================================= */
-@media (max-width: 926px) and (orientation: landscape),
-       (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+ 
+/* Tablet Portrait — keeps photo/logo */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
     .letterhead .side-block { display: flex; }
     .profile-pic { width: 55px; height: 55px; }
     h1 { font-size: 18px; }
@@ -237,68 +402,54 @@
     .impact-row { display: flex; flex-wrap: nowrap; justify-content: center; gap: 6px; margin-bottom: 6px; }
     .box { flex: 0 0 calc(20% - 6px); min-width: unset; max-width: unset; font-size: 10px; padding: 5px 4px; height: auto; min-height: 40px; box-sizing: border-box; }
     .box b { font-size: 12px; margin-bottom: 2px; }
-    .grid { grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 8px; }
-    .icon { display: inline-block; }
-    .item { min-height: unset; cursor: default; margin-bottom: 8px; }
-    .item-desc { display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
-    .item-title { font-size: 13px; }
-    .item-title::before { content: none; }
-    .item-title::after { content: none; }
+    .carousel-desktop { display: none; }
+    .carousel-mobile { display: block; }
     .bottom { display: grid; grid-template-columns: 2fr 1fr; margin-top: 12px; }
     .container { padding: 8px 10px; }
 }
 
-/* =============================================
-   MOBILE PORTRAIT: max 768px portrait
-   ============================================= */
+/* Mobile Landscape — no photo/logo */
+@media (max-width: 926px) and (orientation: landscape) {
+    .letterhead .side-block { display: none; }
+    h1 { font-size: 18px; }
+    .tagline { font-size: 11px; line-height: 1.3; }
+    .intro { font-size: 11px; margin: 4px auto 4px auto; line-height: 1.3; }
+    .impact { display: block; max-width: 100%; padding: 0 8px; }
+    .impact-row { display: flex; flex-wrap: nowrap; justify-content: center; gap: 6px; margin-bottom: 6px; }
+    .box { flex: 0 0 calc(20% - 6px); min-width: unset; max-width: unset; font-size: 10px; padding: 5px 4px; height: auto; min-height: 40px; box-sizing: border-box; }
+    .box b { font-size: 12px; margin-bottom: 2px; }
+    .carousel-desktop { display: none; }
+    .carousel-mobile { display: block; }
+    .bottom { display: grid; grid-template-columns: 2fr 1fr; margin-top: 12px; }
+    .container { padding: 8px 10px; }
+}
+ 
+/* Mobile Portrait */
 @media (max-width: 768px) and (orientation: portrait) {
-
-    /* LETTERHEAD */
     .side-block { display: none; }
     h1 { font-size: 18px; letter-spacing: 1px; line-height: 1.3; }
     .tagline { font-size: 12px; line-height: 1.4; margin-top: 6px; margin-bottom: 4px; }
-
-    /* INTRO */
     .intro { font-size: 12px; line-height: 1.4; margin-top: 10px; margin-bottom: 0; }
-
-    /* IMPACT — 3x3 grid */
     .impact { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 0 6px; margin-bottom: 8px; }
     .impact-title { grid-column: 1 / -1; font-size: 16px; margin-bottom: 8px; }
     .impact-row { display: contents; }
     .box { min-width: unset; max-width: unset; width: 100%; height: auto; min-height: unset; font-size: 10px; padding: 4px 3px; box-sizing: border-box; line-height: 1.3; }
     .box b { font-size: 11px; margin-bottom: 2px; }
-
-    /* SPACING */
-    .grid { grid-template-columns: 1fr; gap: 8px; margin-top: 12px; }
-    .section-block { margin-top: 4px; margin-bottom: 4px; }
-    .section-block .item:last-child { margin-bottom: 0; }
-
-    /* ITEMS */
-    .icon { display: none; }
-    .item { min-height: unset; margin-bottom: 6px; cursor: pointer; align-items: flex-start; }
-    .item-desc { display: none; font-size: 12px; color: #cfcfcf; margin-top: 6px; line-height: 1.4; -webkit-line-clamp: unset; overflow: visible; }
-    .item-desc.expanded { display: block; }
-    .item-title { font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
-    .item-title::before { content: '◆'; color: #d4af37; font-size: 11px; margin-right: 8px; flex-shrink: 0; }
-    .item-title::after { content: 'expand ▾'; font-size: 10px; color: #8a8a8a; margin-left: auto; padding-left: 8px; flex-shrink: 0; white-space: nowrap; }
-    .item.expanded .item-title::after { content: 'collapse ▴'; }
-
-    /* MORE LINK */
-    .more-link { position: absolute; right: 0; top: 20px; font-size: 12px; }
-
-    /* BOTTOM */
+    .carousel-desktop { display: none; }
+    .carousel-mobile { display: block; }
     .bottom { display: block; margin-top: 16px; }
     .compact-list li { font-size: 12px; }
     .engage { margin-top: 12px; }
 }
-
+ 
 </style>
 </head>
-
+ 
 <body>
-
+ 
 <div class="container">
-
+ 
+<!-- LETTERHEAD -->
 <div class="letterhead">
     <div class="side-block">
         <img src="image.jpg" alt="Sharad Kumar" class="profile-pic">
@@ -309,146 +460,252 @@
     </div>
     <div class="side-block">
         <svg viewBox="0 0 120 120" width="100" height="100">
-    <defs>
-        <path id="bottom-arc" d="M 15,60 A 45,45 0 0,0 105,60"/>
-    </defs>
-    <image href="logo.png" x="20" y="15" width="80" height="80" style="filter: brightness(2.5) saturate(3) hue-rotate(5deg);"/>
+            <defs>
+                <path id="bottom-arc" d="M 15,60 A 45,45 0 0,0 105,60"/>
+            </defs>
+            <image href="logo.png" x="20" y="15" width="80" height="80" style="filter: brightness(2.5) saturate(3) hue-rotate(5deg);"/>
             <text font-size="11" fill="#d4af37" font-family="Segoe UI, sans-serif" font-weight="500" letter-spacing="2">
                 <textPath href="#bottom-arc">Addicted to Results</textPath>
             </text>
         </svg>
     </div>
 </div>
+ 
+<!-- INTRO -->
 <p class="intro">I partner with enterprise leaders to drive go-to-market strategy, shape AI and cloud enabled systems, modernize processes, drive techno-commercial proposals, establish scalable delivery and enable workforce transformation for measurable outcomes.</p>
-
+ 
+<!-- IMPACT SNAPSHOT -->
 <div class="impact">
-<div class="impact-title">IMPACT SNAPSHOT</div>
-<div class="impact-row">
-    <div class="box"><b>$300 M</b> SBU Rebuild</div>
-    <div class="box"><b>425+</b>Delivery Portfolio</div>
-    <div class="box"><b>$20 M</b> Practice Incubated</div>
-    <div class="box"><b>75%+</b> Hit-to-Win</div>
-    <div class="box"><b>6000+</b> Apps Modernized</div>
+    <div class="impact-title">IMPACT SNAPSHOT</div>
+    <div class="impact-row">
+        <div class="box"><b>$300 M</b> SBU Rebuild</div>
+        <div class="box"><b>425+</b> Delivery Portfolio</div>
+        <div class="box"><b>$20 M</b> Practice Incubated</div>
+        <div class="box"><b>75%+</b> Hit-to-Win</div>
+        <div class="box"><b>6000+</b> Apps Modernized</div>
+    </div>
+    <div class="impact-row">
+        <div class="box"><b>9</b> Geographies Built</div>
+        <div class="box"><b>$13 M</b> Portfolio ACV</div>
+        <div class="box"><b>Salvaged</b> Red-Flags</div>
+        <div class="box"><b>$47 M</b> P&amp;L Ownership</div>
+    </div>
 </div>
-<div class="impact-row">
-    <div class="box"><b>9</b> Geographies Built</div>
-    <div class="box"><b>$13 M</b> Portfolio ACV</div>
-    <div class="box"><b>Salvaged</b> Red-Flags</div>
-    <div class="box"><b>$47 M</b> P&amp;L Ownership</div>
-</div>
-</div>
-
-<div class="grid">
-
-<!-- GTM -->
-<div class="section-block">
-<div class="section-title">GTM & GROWTH</div>
-<a href="gtm.html" class="more-link">more...</a>
-<div class="item"><i class="fa-solid fa-magnifying-glass icon"></i><div><div class="item-title">Market & Competitive Intelligence</div><div class="item-desc">Conducted market (geography and regional) and competitive analysis to define ICPs, map stakeholders and drive proposition alignment.</div></div></div>
-<div class="item"><i class="fa-solid fa-handshake icon"></i><div><div class="item-title">Sales & Pursuit Leadership</div><div class="item-desc">Drove end-to-end RFI/RFP/RFQ cycles, proposal defense, negotiations and contract structuring to win $1M+ deals achieving a 75%+ win rate.</div></div></div>
-<div class="item"><i class="fa-solid fa-diagram-project icon"></i><div><div class="item-title">Partnerships & Alliances</div><div class="item-desc">Built global and regional alliances leveraging partner ecosystems to deliver co-branded solutions (incl. SaaS) with flexible revenue-sharing models</div></div></div>
-<div class="item"><i class="fa-solid fa-bullhorn icon"></i><div><div class="item-title">Brand Positioning</div><div class="item-desc">Enabled GTM through solution and technical readiness, generated & qualified leads and built thought leadership via forums and analyst engagements.</div></div></div>
-</div>
-
-<!-- SOLUTION -->
-<div class="section-block">
-<div class="section-title">SOLUTION</div>
-<a href="solution.html" class="more-link">more...</a>
-<div class="item"><i class="fa-solid fa-cloud icon"></i><div><div class="item-title">Cloud & SaaS Transformation</div><div class="item-desc">Architected and operationalized automated transformation and migration programs leveraging the 7R principles.</div></div></div>
-<div class="item"><i class="fa-solid fa-brain icon"></i><div><div class="item-title">AI-Driven Engineering</div><div class="item-desc">Embedded consulting-led machine learning and predictive modeling into the SDLC to enable automated pattern analysis and drive higher accuracy.</div></div></div>
-<div class="item"><i class="fa-solid fa-lock icon"></i><div><div class="item-title">DevOps & Security</div><div class="item-desc">Designed end-to-end CI/CD, virtualization and deployment automation solutions, improving release velocity and operational resilience.</div></div></div>
-<div class="item"><i class="fa-solid fa-chart-line icon"></i><div><div class="item-title">Data Analytics & Observability</div><div class="item-desc">Established BI-led engineering and observability frameworks to drive smarter decisions and improve performance with measurable outcomes.</div></div></div>
-</div>
-
-<!-- DELIVERY -->
-<div class="section-block">
-<div class="section-title">DELIVERY</div>
-<a href="delivery.html" class="more-link">more...</a>
-<div class="item"><i class="fa-solid fa-check-circle icon"></i><div><div class="item-title">Agile & Scrum Execution</div><div class="item-desc">Led global teams with Agile governance, in-sprint automation and tiered regression to accelerate CI/CD, ensuring predictable quality.</div></div></div>
-<div class="item"><i class="fa-solid fa-users icon"></i><div><div class="item-title">Stakeholder Management</div><div class="item-desc">Governed and delievred global multimillion-dollar programs tracking SLAs through real-time balanced scorecards dashboard driving clarity.</div></div></div>
-<div class="item"><i class="fa-solid fa-shield icon"></i><div><div class="item-title">Quality & Risk Management</div><div class="item-desc">Implemented predictive models for risk and stability scoring, defect prediction and impact-based prioritization, improving release stability.</div></div></div>
-<div class="item"><i class="fa-solid fa-globe icon"></i><div><div class="item-title">Global Team Leadership</div><div class="item-desc">Built and scaled delivery CoEs (federated and non-federated), driving governance, process maturity and enterprise-scale delivery excellence.</div></div></div>
-</div>
-
-
-</div>
-
+ 
+<!-- CAROUSEL SECTION -->
+<div class="impact-title" style="margin-top: 16px; margin-bottom: 8px; text-align: left;">WORK AT A GLANCE</div>
+<div class="carousel-section">
+ 
+    <!-- DESKTOP: three carousels side by side -->
+    <div class="carousel-desktop">
+ 
+        <!-- Growth -->
+        <div class="carousel-col">
+            <div class="carousel-col-title">Growth</div>
+            <div class="carousel-card">
+                <div class="carousel-card-title" id="d-growth-title"></div>
+                <div class="carousel-card-desc" id="d-growth-desc"></div>
+            </div>
+            <div class="carousel-nav">
+                <button class="carousel-arrow" onclick="move('growth', -1)">&#8592;</button>
+                <span class="carousel-counter" id="d-growth-counter">1/4</span>
+                <button class="carousel-arrow" onclick="move('growth', 1)">&#8594;</button>
+            </div>
+            <div class="carousel-more"><a href="gtm.html">More on Growth &rarr;</a></div>
+        </div>
+ 
+        <!-- Solution -->
+        <div class="carousel-col">
+            <div class="carousel-col-title">Solution</div>
+            <div class="carousel-card">
+                <div class="carousel-card-title" id="d-solution-title"></div>
+                <div class="carousel-card-desc" id="d-solution-desc"></div>
+            </div>
+            <div class="carousel-nav">
+                <button class="carousel-arrow" onclick="move('solution', -1)">&#8592;</button>
+                <span class="carousel-counter" id="d-solution-counter">1/4</span>
+                <button class="carousel-arrow" onclick="move('solution', 1)">&#8594;</button>
+            </div>
+            <div class="carousel-more"><a href="solution.html">More on Solution &rarr;</a></div>
+        </div>
+ 
+        <!-- Delivery -->
+        <div class="carousel-col">
+            <div class="carousel-col-title">Delivery</div>
+            <div class="carousel-card">
+                <div class="carousel-card-title" id="d-delivery-title"></div>
+                <div class="carousel-card-desc" id="d-delivery-desc"></div>
+            </div>
+            <div class="carousel-nav">
+                <button class="carousel-arrow" onclick="move('delivery', -1)">&#8592;</button>
+                <span class="carousel-counter" id="d-delivery-counter">1/4</span>
+                <button class="carousel-arrow" onclick="move('delivery', 1)">&#8594;</button>
+            </div>
+            <div class="carousel-more"><a href="delivery.html">More on Delivery &rarr;</a></div>
+        </div>
+ 
+    </div>
+ 
+<!-- MOBILE/TABLET: stacked accordion carousel -->
+    <div class="carousel-mobile">
+    <div class="swipe-wrapper">
+        <div class="swipe-sidebar left" onclick="swipeNav(-1)">&#8592;</div>
+        <div class="swipe-viewport">
+            <div class="swipe-track" id="swipe-track"></div>
+        </div>
+        <div class="swipe-sidebar right" onclick="swipeNav(1)">&#8594;</div>
+    </div>
+    <div class="swipe-counter" id="swipe-counter">1 / 12</div>
+    <div class="carousel-more" id="swipe-more" style="text-align:right; margin-top:4px; font-size:12px;"></div>
+</div>  
+ 
+<!-- BOTTOM SECTION -->
 <div class="bottom">
-
-<div>
-<div class="section-title">THOUGHT LEADERSHIP & RECOGNITION</div>
-<ul class="compact-list">
-<li><i class="fa-solid fa-pen-nib"></i><span><strong>Author & Co-Author</strong>: DevOps whitepapers, Testing Practitioner Handbook and playbooks on APM, governance and multi-vendor operations and process. </span></li>
-<li><i class="fa-solid fa-certificate"></i><span><strong>Certified SME</strong>: SMACT (Social, Mobile, Analytics, Cloud and Internet of Things), Digital Strategy and Transformation, Cloud and API Gateway</span></li>
-<li><i class="fa-solid fa-microphone"></i><span><strong>Speaker & Jury Member</strong>: Engaged at national and international forums on AI, DevOps and transformation; Member, Asia Cloud Computing Association.</span></li>
-<li><i class="fa-solid fa-trophy"></i><span><strong>Recognized</strong>:QA workshop South Korea, Laying process foundation for offshore delivery; Best Business Operator; multiple ACE awards.</span></li>
-</ul>
+    <div>
+        <div class="section-title">THOUGHT LEADERSHIP &amp; RECOGNITION</div>
+        <ul class="compact-list">
+            <li><i class="fa-solid fa-pen-nib"></i><span><strong>Author &amp; Co-Author</strong>: DevOps whitepapers, Testing Practitioner Handbook and playbooks on APM, governance and multi-vendor operations and process.</span></li>
+            <li><i class="fa-solid fa-certificate"></i><span><strong>Certified SME</strong>: SMACT (Social, Mobile, Analytics, Cloud and Internet of Things), Digital Strategy and Transformation, Cloud and API Gateway</span></li>
+            <li><i class="fa-solid fa-microphone"></i><span><strong>Speaker &amp; Jury Member</strong>: Engaged at national and international forums on AI, DevOps and transformation; Member, Asia Cloud Computing Association.</span></li>
+            <li><i class="fa-solid fa-trophy"></i><span><strong>Recognized</strong>: QA workshop South Korea, Laying process foundation for offshore delivery; Best Business Operator; multiple ACE awards.</span></li>
+        </ul>
+    </div>
+    <div class="engage">
+        <div class="section-title">ENGAGE WITH ME</div>
+        <div class="engage-icons">
+            <a href="mailto:sharad.kumar.ms@gmail.com?subject=Connect with Sharad">
+                <i class="fa-solid fa-envelope"></i>
+                <span>E-mail</span>
+            </a>
+            <a href="https://www.linkedin.com/in/sharad-kumar-11264247" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://calendly.com/sharad-kumar-ms/strategic-connect" target="_blank">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Book my Calendar</span>
+            </a>
+        </div>
+    </div>
 </div>
-
-<div class="engage">
-<div class="section-title">ENGAGE WITH ME</div>
-<div class="engage-icons">
-
-<a href="mailto:sharad.kumar.ms@gmail.com?subject=Connect with Sharad" class="engage-item">
-    <i class="fa-solid fa-envelope"></i>
-    <span>E-mail</span>
-</a>
-
-<a href="https://www.linkedin.com/in/sharad-kumar-11264247" target="_blank" class="engage-item">
-    <i class="fa-brands fa-linkedin"></i>
-    <span>LinkedIn</span>
-</a>
-
-<a href="https://calendly.com/sharad-kumar-ms/strategic-connect" target="_blank" class="engage-item">
-    <i class="fa-solid fa-calendar-days"></i>
-    <span>Book my Calendar</span>
-</a>
-
+ 
 </div>
-</div>
-
-</div>
-
-</div>
-
+ 
 <script>
-function initAccordion() {
-    // Remove existing listeners by cloning
-    document.querySelectorAll('.item').forEach(item => {
-        const clone = item.cloneNode(true);
-        item.parentNode.replaceChild(clone, item);
+const data = {
+    growth: [
+        { title: "Market & Competitive Intelligence", desc: "Conducted market (geography and regional) and competitive analysis to define ICPs, map stakeholders and drive proposition alignment." },
+        { title: "Sales & Pursuit Leadership", desc: "Drove end-to-end RFI/RFP/RFQ cycles, proposal defense, negotiations and contract structuring to win $1M+ deals achieving a 75%+ win rate." },
+        { title: "Partnerships & Alliances", desc: "Built global and regional alliances leveraging partner ecosystems to deliver co-branded solutions (incl. SaaS) with flexible revenue-sharing models." },
+        { title: "Brand Positioning", desc: "Enabled GTM through solution and technical readiness, generated & qualified leads and built thought leadership via forums and analyst engagements." }
+    ],
+    solution: [
+        { title: "Cloud & SaaS Transformation", desc: "Architected and operationalized automated transformation and migration programs leveraging the 7R principles." },
+        { title: "AI-Driven Engineering", desc: "Embedded consulting-led machine learning and predictive modeling into the SDLC to enable automated pattern analysis and drive higher accuracy." },
+        { title: "DevOps & Security", desc: "Designed end-to-end CI/CD, virtualization and deployment automation solutions, improving release velocity and operational resilience." },
+        { title: "Data Analytics & Observability", desc: "Established BI-led engineering and observability frameworks to drive smarter decisions and improve performance with measurable outcomes." }
+    ],
+    delivery: [
+        { title: "Agile & Scrum Execution", desc: "Led global teams with Agile governance, in-sprint automation and tiered regression to accelerate CI/CD, ensuring predictable quality." },
+        { title: "Stakeholder Management", desc: "Governed and delivered global multimillion-dollar programs tracking SLAs through real-time balanced scorecards driving clarity." },
+        { title: "Quality & Risk Management", desc: "Implemented predictive models for risk and stability scoring, defect prediction and impact-based prioritization, improving release stability." },
+        { title: "Global Team Leadership", desc: "Built and scaled delivery CoEs (federated and non-federated), driving governance, process maturity and enterprise-scale delivery excellence." }
+    ]
+};
+
+const idx = { growth: 0, solution: 0, delivery: 0 };
+
+// Build flat list of all 12 cards
+const allCards = [];
+['growth', 'solution', 'delivery'].forEach(section => {
+    data[section].forEach(item => {
+        allCards.push({ section, ...item });
     });
+});
 
-    if (window.innerWidth <= 768 &&
-        window.matchMedia("(orientation: portrait)").matches) {
+let currentCard = 0;
 
-        document.querySelectorAll('.item').forEach(item => {
-            item.addEventListener('click', function () {
-                const desc = this.querySelector('.item-desc');
-                const isExpanded = this.classList.contains('expanded');
+// Desktop render
+function renderDesktop(s) {
+    const item = data[s][idx[s]];
+    document.getElementById('d-' + s + '-title').textContent = item.title;
+    document.getElementById('d-' + s + '-desc').textContent = item.desc;
+    document.getElementById('d-' + s + '-counter').textContent = (idx[s] + 1) + '/' + data[s].length;
+}
 
-                // Close all
-                document.querySelectorAll('.item').forEach(i => {
-                    i.classList.remove('expanded');
-                    const d = i.querySelector('.item-desc');
-                    if (d) d.classList.remove('expanded');
-                });
+function move(s, dir) {
+    idx[s] = (idx[s] + dir + data[s].length) % data[s].length;
+    renderDesktop(s);
+}
 
-                // Open clicked if it was closed
-                if (!isExpanded && desc) {
-                    this.classList.add('expanded');
-                    desc.classList.add('expanded');
-                }
-            });
-        });
+// Build swipe cards
+function buildSwipeCards() {
+    const track = document.getElementById('swipe-track');
+    if (!track) return;
+    track.innerHTML = '';
+    allCards.forEach((card, i) => {
+        const div = document.createElement('div');
+        div.className = 'swipe-card';
+        div.innerHTML = `
+            <div class="swipe-card-section">${card.section}</div>
+            <div class="swipe-card-title">${card.title}</div>
+            <div class="swipe-card-desc">${card.desc}</div>
+        `;
+        track.appendChild(div);
+    });
+    updateSwipe();
+}
+
+function swipeNav(dir) {
+    currentCard = (currentCard + dir + allCards.length) % allCards.length;
+    updateSwipe();
+}
+
+function updateSwipe() {
+    const track = document.getElementById('swipe-track');
+    const counter = document.getElementById('swipe-counter');
+    const more = document.getElementById('swipe-more');
+    if (!track || !counter) return;
+    track.style.transform = `translateX(${-currentCard * 100}%)`;
+    counter.textContent = (currentCard + 1) + ' / ' + allCards.length;
+    if (more) {
+        const section = allCards[currentCard].section;
+        const links = { growth: 'gtm.html', solution: 'solution.html', delivery: 'delivery.html' };
+        const labels = { growth: 'Growth', solution: 'Solution', delivery: 'Delivery' };
+        more.innerHTML = `<a href="${links[section]}" style="color:#4da3ff;text-decoration:none;">More on ${labels[section]} &rarr;</a>`;
     }
 }
 
-window.addEventListener('load', initAccordion);
-window.addEventListener('orientationchange', function () {
-    setTimeout(initAccordion, 300);
-});
-</script>
+// Touch swipe
+let touchStartX = 0;
+let touchEndX = 0;
 
+function initSwipe() {
+    const track = document.getElementById('swipe-track');
+    if (!track) return;
+
+    track.addEventListener('touchstart', e => {
+        touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 40) {
+        swipeNav(diff > 0 ? 1 : -1);
+    }
+}, { passive: true });
+
+}
+
+function init() {
+    ['growth', 'solution', 'delivery'].forEach(s => renderDesktop(s));
+    buildSwipeCards();
+    initSwipe();
+    window.addEventListener('resize', updateSwipe);
+}
+
+window.addEventListener('load', init);
+</script> 
 </body>
 </html>

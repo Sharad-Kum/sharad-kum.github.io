@@ -289,10 +289,11 @@
 .swipe-card-desc {
     font-size: 13px;
     color: #cfcfcf;
-    line-height: 1.8;
+    line-height: 1.25;
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: pre-line;
+    margin-top: 4px;
 }
 
 .swipe-counter {
@@ -598,7 +599,7 @@ const data = {
     growth: [
         {
             title: "Market & Competitive Intelligence",
-            desc: "• Mapped ICPs & competitive landscape over 9+ geographies\n• Enabled differentiated positioning through briefings & messaging\n• Drove entry & expansion into Americas, ASEAN, ANZ, UK & Europe\n• Converted insights into aligned executable GTM strategy"
+            desc: "• Mapped ICPs & competitive landscape across geographies\n• Enabled differentiated positioning through briefings & messaging\n• Drove entry & expansion into Americas, ASEAN, ANZ, UK & Europe\n• Converted insights into aligned executable GTM strategy"
         },
         {
             title: "Sales & Pursuit Leadership",
@@ -666,7 +667,7 @@ let currentCard = 0;
 function renderDesktop(s) {
     const item = data[s][idx[s]];
     document.getElementById('d-' + s + '-title').textContent = item.title;
-    document.getElementById('d-' + s + '-desc').textContent = item.desc;
+    document.getElementById('d-' + s + '-desc').innerHTML = item.desc.replace(/\n/g, '<br><br>');
     document.getElementById('d-' + s + '-counter').textContent = (idx[s] + 1) + '/' + data[s].length;
 }
 
@@ -686,7 +687,7 @@ function buildSwipeCards() {
         div.innerHTML = `
             <div class="swipe-card-section">${card.section}</div>
             <div class="swipe-card-title">${card.title}</div>
-            <div class="swipe-card-desc">${card.desc}</div>
+    	    <div class="swipe-card-desc">${card.desc.replace(/\n/g, '\n\n')}</div>
         `;
         track.appendChild(div);
     });

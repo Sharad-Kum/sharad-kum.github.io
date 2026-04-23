@@ -117,6 +117,7 @@
     line-height: 1.5;
     flex: 1;
     overflow: hidden;
+    white-space: pre-line;
 }
  
 .carousel-nav {
@@ -288,9 +289,10 @@
 .swipe-card-desc {
     font-size: 13px;
     color: #cfcfcf;
-    line-height: 1.6;
+    line-height: 1.8;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    white-space: pre-line;
 }
 
 .swipe-counter {
@@ -594,25 +596,60 @@
 <script>
 const data = {
     growth: [
-        { title: "Market & Competitive Intelligence", desc: "Conducted market (geography and regional) and competitive analysis to define ICPs, map stakeholders and drive proposition alignment." },
-        { title: "Sales & Pursuit Leadership", desc: "Drove end-to-end RFI/RFP/RFQ cycles, proposal defense, negotiations and contract structuring to win $1M+ deals achieving a 75%+ win rate." },
-        { title: "Partnerships & Alliances", desc: "Built global and regional alliances leveraging partner ecosystems to deliver co-branded solutions (incl. SaaS) with flexible revenue-sharing models." },
-        { title: "Brand Positioning", desc: "Enabled GTM through solution and technical readiness, generated & qualified leads and built thought leadership via forums and analyst engagements." }
+        {
+            title: "Market & Competitive Intelligence",
+            desc: "• Mapped ICPs & competitive landscape across 9+ geographies\n• Enabled differentiated positioning through analyst briefings\n• Converted market insight into executable GTM strategy\n• Supported entry into Americas, ASEAN, ANZ, UK & Europe"
+        },
+        {
+            title: "Sales & Pursuit Leadership",
+            desc: "• Achieved 75%+ hit-to-win ratio across strategic pursuits\n• Led proposal defence & negotiations for $1M+ deals\n• Designed Business Value Assessment & ROI models\n• Structured ELAs, revenue-sharing & subscription constructs"
+        },
+        {
+            title: "Partnerships & Alliances",
+            desc: "• Built Joint GTM strategies with cloud & ecosystem partners\n• Co-developed SaaS platforms with revenue-sharing models\n• Managed integrations with HP, IBM, MicroFocus & global vendors\n• Led joint account planning & cross-portfolio expansion"
+        },
+        {
+            title: "Brand Positioning",
+            desc: "• Keynote & plenary speaker at national & international forums\n• Conducted executive analyst briefings for market credibility\n• Built thought leadership through DevOps, AI & transformation content\n• Launched service lines with ROI-backed business cases"
+        }
     ],
     solution: [
-        { title: "Cloud & SaaS Transformation", desc: "Architected and operationalized automated transformation and migration programs leveraging the 7R principles." },
-        { title: "AI-Driven Engineering", desc: "Embedded consulting-led machine learning and predictive modeling into the SDLC to enable automated pattern analysis and drive higher accuracy." },
-        { title: "DevOps & Security", desc: "Designed end-to-end CI/CD, virtualization and deployment automation solutions, improving release velocity and operational resilience." },
-        { title: "Data Analytics & Observability", desc: "Established BI-led engineering and observability frameworks to drive smarter decisions and improve performance with measurable outcomes." }
+        {
+            title: "Cloud & SaaS Transformation",
+            desc: "• Architected migration of 6,000+ applications using 7R principles\n• Designed multi-cloud ecosystems with CI/CD & release orchestration\n• Built API-first & Platform-as-a-Service architectures\n• Delivered Pay-per-Use & As-a-Service commercial constructs"
+        },
+        {
+            title: "AI-Driven Engineering",
+            desc: "• Embedded ML-based predictive models for defect forecasting\n• Designed AI-assisted test design & coverage optimisation\n• Built intelligent validation models minimising regression scope\n• Integrated AI-driven automation into SDLC at enterprise scale"
+        },
+        {
+            title: "DevOps & Security",
+            desc: "• Architected end-to-end DevSecOps ecosystems across dev, test & release\n• Implemented in-sprint progressive automation accelerating CI/CD\n• Engineered Service Virtualisation & Test Data Management platforms\n• Designed cloud-hosted Performance Engineering Labs (Pay-per-Use)"
+        },
+        {
+            title: "Data Analytics & Observability",
+            desc: "• Established BI-led engineering frameworks for operational decisions\n• Built live dashboard governance for SLA tracking & visibility\n• Developed observability frameworks for cost & risk optimisation\n• Integrated predictive capacity modelling for infrastructure planning"
+        }
     ],
     delivery: [
-        { title: "Agile & Scrum Execution", desc: "Led global teams with Agile governance, in-sprint automation and tiered regression to accelerate CI/CD, ensuring predictable quality." },
-        { title: "Stakeholder Management", desc: "Governed and delivered global multimillion-dollar programs tracking SLAs through real-time balanced scorecards driving clarity." },
-        { title: "Quality & Risk Management", desc: "Implemented predictive models for risk and stability scoring, defect prediction and impact-based prioritization, improving release stability." },
-        { title: "Global Team Leadership", desc: "Built and scaled delivery CoEs (federated and non-federated), driving governance, process maturity and enterprise-scale delivery excellence." }
+        {
+            title: "Agile & Scrum Execution",
+            desc: "• Led global teams with Agile governance & in-sprint automation\n• Implemented tiered regression suites accelerating CI/CD cycles\n• Scaled engagements from 45 to 180+ FTE in 10 months\n• Recovered multiple at-risk red programmes restoring stability"
+        },
+        {
+            title: "Stakeholder Management",
+            desc: "• Governed $300M+ SBU rebuild across global accounts\n• Managed global P&L for P&C insurance portfolio\n• Led executive workshops aligning strategy & transformation roadmaps\n• Delivered balanced scorecard dashboards driving SLA compliance"
+        },
+        {
+            title: "Quality & Risk Management",
+            desc: "• Established predictive models for risk scoring & defect prediction\n• Built self-healing regression suites & automation frameworks\n• Developed governance frameworks & process handbooks at scale\n• Introduced model-based prediction for future workload planning"
+        },
+        {
+            title: "Global Team Leadership",
+            desc: "• Built federated & non-federated Delivery CoEs with 425+ FTE\n• Established governance, handbooks & workforce transformation\n• Led delivery across Americas, UK & Europe, ANZ & ASEAN\n• Aligned operating models with delivery discipline & business outcomes"
+        }
     ]
 };
-
 const idx = { growth: 0, solution: 0, delivery: 0 };
 
 // Build flat list of all 12 cards

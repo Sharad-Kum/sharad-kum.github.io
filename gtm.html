@@ -3,30 +3,301 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sharad Kumar</title>
+<title>Sharad Kumar | Growth & GTM</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
-/* GTM — page-specific overrides only */
-
-.container {
-    padding-bottom: 0;
+ 
+/* =============================================
+   GTM PAGE — SPECIFIC STYLES
+   ============================================= */
+ 
+.page-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #e6e6e6;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+    margin-top: 16px;
+}
+ 
+/* =============================================
+   CAROUSEL WRAPPER
+   ============================================= */
+ 
+.sub-carousel-section {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.section-title.flush-below {
-    margin-top: 20px;
+.sub-page-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    flex: 1;
 }
 
-.flush-below + .extra-points {
-    margin-top: -7px;
+.sub-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex: 1;
 }
+ 
+/* Desktop/Landscape/Tablet: 2 cards side by side */
+.sub-carousel-desktop {
+    display: block;
+}
+ 
+.sub-page-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+ 
+/* Nav */
+.sub-carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 12px;
+}
+ 
+.sub-arrow {
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    color: #d4af37;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+ 
+.sub-arrow:hover {
+    background: rgba(212, 175, 55, 0.25);
+}
+ 
+.sub-counter {
+    font-size: 12px;
+    color: #a0a0a0;
+    min-width: 40px;
+    text-align: center;
+}
+ 
+/* Mobile Portrait: single card swipe */
+.sub-carousel-mobile {
+    display: none;
+}
+ 
+.sub-swipe-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+ 
+.sub-swipe-sidebar {
+    width: 28px;
+    min-width: 28px;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #d4af37;
+    font-size: 15px;
+    user-select: none;
+    flex-shrink: 0;
+}
+ 
+.sub-swipe-sidebar.left {
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+}
+ 
+.sub-swipe-sidebar.right {
+    border-radius: 0 8px 8px 0;
+    border-left: none;
+}
+ 
+.sub-swipe-sidebar:hover {
+    background: rgba(212, 175, 55, 0.25);
+}
+ 
+.sub-swipe-viewport {
+    flex: 1;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-left: none;
+    border-right: none;
+}
+ 
+.sub-swipe-track {
+    display: flex;
+    transition: transform 0.35s ease;
+    will-change: transform;
+}
+ 
+.sub-swipe-counter {
+    text-align: center;
+    font-size: 11px;
+    color: #a0a0a0;
+    margin-top: 8px;
+}
+ 
+/* =============================================
+   CARD STYLES
+   ============================================= */
+ 
+.sub-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+ 
+.sub-card h3 {
+    color: #d4af37;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    line-height: 1.3;
+}
+ 
+.sub-mandate {
+    font-size: 12px;
+    color: #d4af37;
+    font-style: italic;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+ 
+.sub-narrative {
+    font-size: 13px;
+    color: #d1d5db;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+ 
+.sub-card ul {
+    padding-left: 16px;
+    margin: 0 0 10px 0;
+    flex: 1;
+}
+ 
+.sub-card ul li {
+    font-size: 13px;
+    color: #cfcfcf;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+ 
+.sub-outcome {
+    font-size: 12px;
+    color: #22c55e;
+    font-weight: 600;
+    margin-top: 4px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+ 
+/* =============================================
+   ADDITIONAL APPROACHES
+   ============================================= */
+ 
+.extra-section {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+ 
+.extra-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+}
+ 
+.extra-list li {
+    font-size: 13px;
+    color: #cfcfcf;
+    line-height: 1.5;
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 6px;
+}
+ 
+.extra-list li::before {
+    content: '◆';
+    color: #d4af37;
+    font-size: 8px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+ 
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+ 
+/* Mobile Portrait only — single card swipe */
+@media (max-width: 768px) and (orientation: portrait) {
+    .sub-carousel-desktop { display: none; }
+    .sub-carousel-mobile { display: block; }
+    .letterhead .side-block { display: none; }
+    h1 { font-size: 18px; letter-spacing: 1px; line-height: 1.3; }
+    .tagline { font-size: 12px; line-height: 1.4; margin-top: 6px; }
+    .extra-list li { font-size: 12px; }
+}
+ 
+/* All other breakpoints — 2 columns */
+@media (max-width: 926px) and (orientation: landscape) {
+    .letterhead .side-block { display: none; }
+    h1 { font-size: 18px; }
+    .tagline { font-size: 11px; line-height: 1.3; }
+    .sub-page-grid { gap: 12px; }
+    .sub-card { padding: 14px; }
+    .sub-card ul li { font-size: 12px; }
+    .sub-narrative { font-size: 12px; }
+}
+ 
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+    h1 { font-size: 20px; }
+    .tagline { font-size: 12px; line-height: 1.3; }
+    .sub-page-grid { gap: 12px; }
+    .sub-card { padding: 14px; }
+    .sub-card ul li { font-size: 12px; }
+    .sub-narrative { font-size: 12px; }
+}
+ 
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    h1 { font-size: 20px; }
+    .tagline { font-size: 12px; line-height: 1.3; }
+    .sub-page-grid { gap: 12px; }
+    .sub-card { padding: 14px; }
+}
+ 
 </style>
 </head>
-
+ 
 <body>
-
 <div class="container">
-
+ 
+<!-- LETTERHEAD -->
 <div class="letterhead">
     <div class="side-block"></div>
     <div class="header-center">
@@ -45,105 +316,195 @@
         </svg>
     </div>
 </div>
-
-<!-- <img src="image.jpg" alt="Sharad Kumar" class="profile-pic"> -->
-
-<div class="section-title">Key GTM Approaches</div>
-<div class="grid-4">
-
-<!-- 1 -->
-<div class="card">
-    <h3>Market & Competitive Intelligence</h3>
-    <div class="mandate">
-        <span class="mandate-label">Mandate:</span> Drive differentiated positioning through market insights
+ 
+<!-- CAROUSEL SECTION -->
+<div class="sub-carousel-section">
+ 
+    <div class="page-section-title">Key GTM Approaches</div>
+ 
+    <!-- DESKTOP/TABLET/LANDSCAPE: 2 cards side by side, paginated -->
+    <div class="sub-carousel-desktop">
+        <div class="sub-page-grid" id="desktop-grid"></div>
+        <div class="sub-carousel-nav">
+            <button class="sub-arrow" onclick="desktopNav(-1)">&#8592;</button>
+            <span class="sub-counter" id="desktop-counter">1 / 2</span>
+            <button class="sub-arrow" onclick="desktopNav(1)">&#8594;</button>
+        </div>
     </div>
-    <div class="narrative">
-        Enabled AI-assisted, data-driven positioning and offering alignment by leveraging structured market intelligence, trend analytics, and competitive benchmarking to deliver actionable insights
+ 
+    <!-- MOBILE PORTRAIT: single card swipe -->
+    <div class="sub-carousel-mobile">
+        <div style="font-size: 11px; color: #a0a0a0; margin-bottom: 8px;">Swipe to explore</div>
+        <div class="sub-swipe-wrapper">
+            <div class="sub-swipe-sidebar left" onclick="mobileNav(-1)">&#8592;</div>
+            <div class="sub-swipe-viewport">
+                <div class="sub-swipe-track" id="mobile-track"></div>
+            </div>
+            <div class="sub-swipe-sidebar right" onclick="mobileNav(1)">&#8594;</div>
+        </div>
+        <div class="sub-swipe-counter" id="mobile-counter">1 / 4</div>
     </div>
-    <ul>
-        <li>Identified whitespace opportunities and quantified growth headroom to inform geography and region specific strategies, enabling targeted market expansion and differentiated positioning.</li>
-        <li>Strengthened value propositions - particularly around speed-to-market, cost efficiency, scalability and stability integrating proprietary and joint accelerators to enhance competitive positioning.</li>
-        <li>Aligned techno-commercial solution positioning with prospect specific needs, focusing on business value, cost optimization, risk mitigation, and ROI clarity, to improve win probability.</li>
+ 
+</div>
+ 
+<!-- ADDITIONAL APPROACHES — fixed, not part of carousel -->
+<div class="extra-section">
+    <div class="page-section-title">Additional GTM Approaches</div>
+    <ul class="extra-list">
+        <li>Designing pilot-led market entry models that allow validation of value propositions and pricing before committing to a scaled rollout</li>
+        <li>Aligning operating cadence across product, sales and delivery teams to ensure disciplined and synchronized GTM execution</li>
+        <li>Embedding governance structures and decision frameworks to continuously adapt GTM strategy in alignment to dynamic market signals and performance data</li>
     </ul>
-    <div class="outcome">
-        <strong>Win probability improved by 25 - 30%| 15–20% faster qualification</strong>
-    </div>
 </div>
-
-<!-- 2 -->
-<div class="card">
-    <h3>Sales Strategy & Pursuit Leadership</h3>
-    <div class="mandate">
-        <span class="mandate-label">Mandate:</span> Drive high-value & volume deal conversion to increase win rates and accelerate revenue.
-    </div>
-    <div class="narrative">
-        Led end-to-end pursuit lifecycle encompassing structured solutioning, proposal development, commercial structuring, stakeholder alignment, and enterprise deal negotiations.
-    </div>
-    <ul>
-        <li>Managed the RFI/RFP/RFQ lifecycle with stage-gated qualification, pipeline hygiene, bid/no-bid governance, and funnel progression controls to optimize conversion and manage the sales funnel effectively.</li>
-        <li>Conducted structured techno-commercial proposal defense workshops and negotiation roundtables, strengthening stakeholder alignment, value articulation, objection handling, and deal closure effectiveness.</li>
-        <li>Closed globally distributed, multi-million-dollar pursuits by orchestrating transition planning, transformation roadmaps, and skill-aligned capacity planning, ensuring readiness, scalability, and sustainable value realization.</li>
-    </ul>
-    <div class="outcome">
-        <strong>Achieved win rate of 65%+ | Pursuit closure improved by 20 - 25% | Improved average deal size by 30% ACV</strong>
-    </div>
-</div>
-
-<!-- 3 -->
-<div class="card">
-    <h3>Partnerships & Alliances</h3>
-    <div class="mandate">
-        <span class="mandate-label">Mandate:</span> Build partner-led growth engines for revenue growth, accelerated market entry, and sustained market advantage
-    </div>
-    <div class="narrative">
-        Forged strategic alliances and co-created differentiated offerings to power platform-led, partner-driven regional and global growth at scale with accelerated market penetration and sustained competitive advantage
-    </div>
-    <ul>
-        <li>Built strategic partner alliances and operationalized the ecosystem through joint GTM models, co-innovation frameworks, co-creation and platform-integrated offerings to unlock new revenue streams.</li>
-        <li>Institutionalized structured market intelligence, whitespace identification and region-specific playbooks to prioritize high-potential segments for accelerated market entry.</li>
-        <li>Enabled joint GTM models with partners for techno-commercial solutions to enhance prospect confidence, value articulation, solution credibility, and win probability</li>
-    </ul>
-    <div class="outcome">
-        <strong>Improved partner led revenue to 28% | Joint account plans enabled 30% faster closure | 20% pipeline expansion</strong>
-    </div>
-</div>
-
-<!-- 4 -->
-<div class="card">
-    <h3>Brand Positioning & Growth</h3>
-    <div class="mandate">
-        <span class="mandate-label">Mandate:</span> Build a demand engine and thought leadership to drive market visibility, pipeline creation, and brand differentiation
-    </div>
-    <div class="narrative">
-        Drove structured GTM initiatives including service launches, narrative development, and demand generation through targeted content, industry forums, digital amplification, and analyst engagement
-    </div>
-    <ul>
-        <li>Developed distinct POVs and insight-led narratives anchored in market shifts, amplified via analyst relations, premium content, and executive forums</li>
-        <li>Incubated differentiated offerings and launch plays with sharp value articulation, scaled through targeted campaigns and partner ecosystems</li>
-        <li>Orchestrated precision demand programs across channels driving qualified pipeline, brand recall, and category positioning</li>
-    </ul>
-    <div class="outcome">
-        <strong>30% qualified leads ↑ | 20% pipeline growth | 15–20% brand uplift</strong>
-    </div>
-</div>
-
-</div>
-
-<div class="section-title flush-below">Additional GTM Approaches</div>
-
-<ul class="extra-points">
-    <li>Designing pilot-led market entry models, soft launch, that allow validation of value propositions and pricing before committing to a scaled rollout</li>
-    <li>Aligning operating cadence across product, sales and delivery teams & stakeholders to ensure disciplined and synchronized GTM execution</li>
-    <li>Embedding governance structures and decision frameworks to continuously adapt GTM strategy in alignment to dynamic market signals and performance data</li>
-</ul>
-
+ 
+<!-- BACK TO MAIN -->
 <div class="back-to-main">
-    <a href="index.html">
-        <i class="fas fa-arrow-up"></i> Back to Main
-    </a>
+    <a href="index.html"><i class="fas fa-arrow-up"></i> Back to Main</a>
 </div>
-
+ 
 </div>
-
+ 
+<script>
+const cards = [
+    {
+        title: "Market & Competitive Intelligence",
+        mandate: "Drive differentiated positioning through market insights",
+        narrative: "Enabled AI-assisted, data-driven positioning and offering alignment by leveraging structured market intelligence, trend analytics, and competitive benchmarking to deliver actionable insights.",
+        bullets: [
+            "Identified whitespace opportunities and quantified growth headroom to inform geography and region specific strategies, enabling targeted market expansion and differentiated positioning.",
+            "Strengthened value propositions — particularly around speed-to-market, cost efficiency, scalability and stability integrating proprietary and joint accelerators to enhance competitive positioning.",
+            "Aligned techno-commercial solution positioning with prospect specific needs, focusing on business value, cost optimization, risk mitigation, and ROI clarity, to improve win probability."
+        ],
+        outcome: "Win probability improved by 25–30% | 15–20% faster qualification"
+    },
+    {
+        title: "Sales Strategy & Pursuit Leadership",
+        mandate: "Drive high-value & volume deal conversion to increase win rates and accelerate revenue",
+        narrative: "Led end-to-end pursuit lifecycle encompassing structured solutioning, proposal development, commercial structuring, stakeholder alignment, and enterprise deal negotiations.",
+        bullets: [
+            "Managed the RFI/RFP/RFQ lifecycle with stage-gated qualification, pipeline hygiene, bid/no-bid governance, and funnel progression controls to optimize conversion and manage the sales funnel effectively.",
+            "Conducted structured techno-commercial proposal defense workshops and negotiation roundtables, strengthening stakeholder alignment, value articulation, objection handling, and deal closure effectiveness.",
+            "Closed globally distributed, multi-million-dollar pursuits by orchestrating transition planning, transformation roadmaps, and skill-aligned capacity planning, ensuring readiness, scalability, and sustainable value realization."
+        ],
+        outcome: "Win rate 65%+ | Pursuit closure improved 20–25% | Average deal size improved 30% ACV"
+    },
+    {
+        title: "Partnerships & Alliances",
+        mandate: "Build partner-led growth engines for revenue growth, accelerated market entry, and sustained market advantage",
+        narrative: "Forged strategic alliances and co-created differentiated offerings to power platform-led, partner-driven regional and global growth at scale with accelerated market penetration and sustained competitive advantage.",
+        bullets: [
+            "Built strategic partner alliances and operationalized the ecosystem through joint GTM models, co-innovation frameworks, co-creation and platform-integrated offerings to unlock new revenue streams.",
+            "Institutionalized structured market intelligence, whitespace identification and region-specific playbooks to prioritize high-potential segments for accelerated market entry.",
+            "Enabled joint GTM models with partners for techno-commercial solutions to enhance prospect confidence, value articulation, solution credibility, and win probability."
+        ],
+        outcome: "Partner-led revenue 28% | Joint account plans enabled 30% faster closure | 20% pipeline expansion"
+    },
+    {
+        title: "Brand Positioning & Growth",
+        mandate: "Build a demand engine and thought leadership to drive market visibility, pipeline creation, and brand differentiation",
+        narrative: "Drove structured GTM initiatives including service launches, narrative development, and demand generation through targeted content, industry forums, digital amplification, and analyst engagement.",
+        bullets: [
+            "Developed distinct POVs and insight-led narratives anchored in market shifts, amplified via analyst relations, premium content, and executive forums.",
+            "Incubated differentiated offerings and launch plays with sharp value articulation, scaled through targeted campaigns and partner ecosystems.",
+            "Orchestrated precision demand programs across channels driving qualified pipeline, brand recall, and category positioning."
+        ],
+        outcome: "30% qualified leads ↑ | 20% pipeline growth | 15–20% brand uplift"
+    }
+];
+ 
+// Build card HTML
+function buildCard(card) {
+    return `<div class="sub-card">
+        <h3>${card.title}</h3>
+        <div class="sub-mandate">Mandate: ${card.mandate}</div>
+        <div class="sub-narrative">${card.narrative}</div>
+        <ul>${card.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
+        <div class="sub-outcome">${card.outcome}</div>
+    </div>`;
+}
+ 
+// DESKTOP: 2 cards per page
+let desktopPage = 0;
+const desktopPages = [
+    [cards[0], cards[1]],
+    [cards[2], cards[3]]
+];
+ 
+function renderDesktop() {
+    const grid = document.getElementById('desktop-grid');
+    const counter = document.getElementById('desktop-counter');
+    if (!grid) return;
+    grid.innerHTML = desktopPages[desktopPage].map(buildCard).join('');
+    counter.textContent = (desktopPage + 1) + ' / ' + desktopPages.length;
+}
+ 
+function desktopNav(dir) {
+    desktopPage = (desktopPage + dir + desktopPages.length) % desktopPages.length;
+    renderDesktop();
+}
+ 
+// MOBILE: single card swipe
+let mobileCard = 0;
+ 
+function buildMobileCards() {
+    const track = document.getElementById('mobile-track');
+    if (!track) return;
+    track.innerHTML = cards.map(card => `<div class="sub-card" style="min-width:100%; max-width:100%; flex-shrink:0; box-sizing:border-box;">${buildCard(card).replace(/<div class="sub-card">/, '').replace(/<\/div>$/, '')}</div>`).join('');
+ 
+    // Rebuild cleanly
+    track.innerHTML = '';
+    cards.forEach(card => {
+        const div = document.createElement('div');
+        div.className = 'sub-card';
+        div.style.cssText = 'min-width:100%; max-width:100%; flex-shrink:0; box-sizing:border-box;';
+        div.innerHTML = `
+            <h3>${card.title}</h3>
+            <div class="sub-mandate">Mandate: ${card.mandate}</div>
+            <div class="sub-narrative">${card.narrative}</div>
+            <ul>${card.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
+            <div class="sub-outcome">${card.outcome}</div>
+        `;
+        track.appendChild(div);
+    });
+    updateMobile();
+}
+ 
+function updateMobile() {
+    const track = document.getElementById('mobile-track');
+    const counter = document.getElementById('mobile-counter');
+    if (!track || !counter) return;
+    track.style.transform = `translateX(${-mobileCard * 100}%)`;
+    counter.textContent = (mobileCard + 1) + ' / ' + cards.length;
+}
+ 
+function mobileNav(dir) {
+    mobileCard = (mobileCard + dir + cards.length) % cards.length;
+    updateMobile();
+}
+ 
+// Touch swipe
+let touchStartX = 0;
+ 
+function initTouch() {
+    const track = document.getElementById('mobile-track');
+    if (!track) return;
+    track.addEventListener('touchstart', e => {
+        touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    track.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) mobileNav(diff > 0 ? 1 : -1);
+    }, { passive: true });
+}
+ 
+function init() {
+    renderDesktop();
+    buildMobileCards();
+    initTouch();
+}
+ 
+window.addEventListener('load', init);
+</script>
+ 
 </body>
 </html>

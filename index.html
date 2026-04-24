@@ -444,6 +444,12 @@
     .compact-list li { font-size: 12px; }
     .engage { margin-top: 12px; }
 }
+
+@media (min-width: 1025px) {
+    #swipe-more {
+        display: none;
+    }
+}
  
 </style>
 </head>
@@ -496,8 +502,10 @@
 </div>
  
 <!-- CAROUSEL SECTION -->
-<div class="impact-title" style="margin-top: 16px; margin-bottom: 8px; text-align: left;">WORK AT A GLANCE</div>
-<div class="carousel-section">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px; margin-bottom: 8px;">
+    <div class="impact-title" style="margin: 0;">WORK AT A GLANCE</div>
+    <div id="swipe-more" style="font-size: 12px;"></div>
+</div><div class="carousel-section">
  
     <!-- DESKTOP: three carousels side by side -->
     <div class="carousel-desktop">
@@ -551,6 +559,7 @@
  
 <!-- MOBILE/TABLET: stacked accordion carousel -->
     <div class="carousel-mobile">
+    <div style="font-size: 11px; color: #a0a0a0; margin-bottom: 8px;">Swipe to explore</div> 
     <div class="swipe-wrapper">
         <div class="swipe-sidebar left" onclick="swipeNav(-1)">&#8592;</div>
         <div class="swipe-viewport">
@@ -559,8 +568,8 @@
         <div class="swipe-sidebar right" onclick="swipeNav(1)">&#8594;</div>
     </div>
     <div class="swipe-counter" id="swipe-counter">1 / 12</div>
-    <div class="carousel-more" id="swipe-more" style="text-align:right; margin-top:4px; font-size:12px;"></div>
 </div>  
+</div>
  
 <!-- BOTTOM SECTION -->
 <div class="bottom">

@@ -32,10 +32,17 @@ img {
     max-width: 1400px;
     margin: auto;
     padding: 25px 12px 10px 12px;
+    box-sizing: border-box;
 }
 
-.header {
-    position: relative;
+.sub-page-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 25px 12px 10px 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 
@@ -57,7 +64,7 @@ h1 {
     font-weight: 500;
     color: #d4af37;
     margin: 0;
-    line-height: 0.5;
+    line-height: 1.2;
 }
 
 .section-title {
@@ -67,182 +74,43 @@ h1 {
     margin-bottom: 5px;
 }
 
-/* ---------------------------------------------
-   4. PROFILE PHOTO
-   Profile pic: visible on desktop (index.html only).
-   Hidden on tablet and mobile (all orientations).
-   Sub-pages keep the <img> commented out in HTML.
-   --------------------------------------------- */
-
-.profile-pic {
-    display: block;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #d4af37;
-    box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
-}
-
-
-/* ---------------------------------------------
-   5. NAVIGATION LINKS
-   --------------------------------------------- */
-
-.home-link {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    color: #4da3ff;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    z-index: 9999;
-}
-
-.back-to-main {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    text-align: right;
-}
-
-.back-to-main a {
-    color: #4da3ff;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.back-to-main a:hover {
-    text-decoration: underline;
-}
-
-.disabled-link {
-    color: #4da3ff;
-    pointer-events: none;
-    opacity: 0.6;
-    cursor: default;
-}
-
-
-/* ---------------------------------------------
-   6. CARDS & GRID (sub-pages)
-   --------------------------------------------- */
-
-.grid-4 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px 10px;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(212, 175, 55, 0.5);
-    border-radius: 10px;
-    padding: 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 260px;
-}
-
-.card h3 {
-    color: #d4af37;
+.page-section-title {
     font-size: 16px;
+    font-weight: 600;
+    color: #e6e6e6;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+    margin-top: 8px;
+}
+
+/* Page header row — title + back link side by side */
+.page-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 14px;
+}
+
+.page-header-row .page-section-title {
     margin: 0;
 }
 
-.card ul {
-    padding-left: 18px;
-    margin: 10px 0 0 0;
-    min-height: 126px;
-    max-height: 126px;
-    overflow: hidden;
-}
-
-.card ul li {
+.page-header-row a {
     font-size: 13px;
-    font-weight: 400;
-    line-height: 1.4;
-    color: #cfcfcf;
-    margin-bottom: 6px;
+    color: #4da3ff;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
-.mandate {
-    font-size: 12px;
-    color: #d4af37;
-    font-style: italic;
-    margin-top: 3px;
-    margin-bottom: 6px;
+.page-header-row a:hover {
+    text-decoration: underline;
 }
 
-.narrative {
-    font-size: 13px;
-    color: #d1d5db;
-    margin-top: 6px;
-    margin-bottom: 12px;
-    min-height: 40px;
-}
-
-.outcome {
-    font-size: 12px;
-    margin-top: 12px;
-    padding-top: 0;
-}
-
-.outcome strong {
-    color: #22c55e;
-}
-
-.extra-points {
-    padding-left: 18px;
-    margin-top: 0px;
-}
-
-.extra-points li {
-    color: #cfcfcf;
-    font-size: 13px;
-    line-height: 1.4;
-    margin-bottom: 0;
-}
-
-.section-block {
-    position: relative;
-    padding-bottom: 0;
-}
 
 /* ---------------------------------------------
-   10. RESPONSIVE — MOBILE & TABLET PORTRAIT/LANDSCAPE
-       Profile pic hidden below 1025px (set in section 4)
+   4. LETTERHEAD
    --------------------------------------------- */
-
-@media (max-width: 1024px) {
-    .grid-4 {
-        grid-template-columns: 1fr;
-    }
-    .container {
-        padding: 15px;
-    }
-    h1 {
-        font-size: 24px;
-    }
-    .tagline {
-        text-align: center;
-        font-size: 16px;
-        font-weight: 500;
-        color: #d4af37;
-        margin: 0;
-    }
-    .card {
-        padding: 14px;
-    }
-    .extra-points li {
-        font-size: 12px;
-    }
- }
 
 .letterhead {
     display: flex;
@@ -265,9 +133,321 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+
+
+/* ---------------------------------------------
+   5. PROFILE PHOTO — desktop only
+   --------------------------------------------- */
+
+.profile-pic {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #d4af37;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+}
+
+
+/* ---------------------------------------------
+   6. NAVIGATION LINKS
+   --------------------------------------------- */
+
+.back-to-main {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.back-to-main a {
+    color: #4da3ff;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.back-to-main a:hover {
+    text-decoration: underline;
+}
+
+.disabled-link {
+    color: #4da3ff;
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: default;
+}
+
+.section-block {
+    position: relative;
+    padding-bottom: 0;
+}
+
+
+/* ---------------------------------------------
+   7. SUB-PAGE CAROUSEL
+   --------------------------------------------- */
+
+.sub-carousel-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.sub-carousel-desktop {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.sub-page-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    flex: 1;
+}
+
+.sub-carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.sub-arrow {
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    color: #d4af37;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.sub-arrow:hover {
+    background: rgba(212, 175, 55, 0.25);
+}
+
+.sub-counter {
+    font-size: 12px;
+    color: #a0a0a0;
+    min-width: 40px;
+    text-align: center;
+}
+
+.sub-carousel-mobile {
+    display: none;
+}
+
+.sub-swipe-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.sub-swipe-sidebar {
+    width: 28px;
+    min-width: 28px;
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #d4af37;
+    font-size: 15px;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.sub-swipe-sidebar.left {
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+}
+
+.sub-swipe-sidebar.right {
+    border-radius: 0 8px 8px 0;
+    border-left: none;
+}
+
+.sub-swipe-sidebar:hover {
+    background: rgba(212, 175, 55, 0.25);
+}
+
+.sub-swipe-viewport {
+    flex: 1;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-left: none;
+    border-right: none;
+}
+
+.sub-swipe-track {
+    display: flex;
+    transition: transform 0.35s ease;
+    will-change: transform;
+}
+
+.sub-swipe-counter {
+    text-align: center;
+    font-size: 11px;
+    color: #a0a0a0;
+    margin-top: 8px;
+}
+
+
+/* ---------------------------------------------
+   8. SUB-PAGE CARDS
+   --------------------------------------------- */
+
+.sub-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.sub-card h3 {
+    color: #d4af37;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    line-height: 1.3;
+}
+
+.sub-mandate {
+    font-size: 12px;
+    color: #d4af37;
+    font-style: italic;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.sub-narrative {
+    font-size: 13px;
+    color: #d1d5db;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.sub-card ul {
+    padding-left: 16px;
+    margin: 0 0 10px 0;
+    flex: 1;
+}
+
+.sub-card ul li {
+    font-size: 13px;
+    color: #cfcfcf;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+.sub-outcome {
+    font-size: 12px;
+    color: #22c55e;
+    font-weight: 600;
+    margin-top: 4px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+
+/* ---------------------------------------------
+   9. ADDITIONAL SECTION
+   --------------------------------------------- */
+
+.extra-section {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.extra-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+}
+
+.extra-list li {
+    font-size: 13px;
+    color: #cfcfcf;
+    line-height: 1.5;
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.extra-list li::before {
+    content: '◆';
+    color: #d4af37;
+    font-size: 8px;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+
+/* ---------------------------------------------
+   10. RESPONSIVE
+   --------------------------------------------- */
+
+/* Below desktop — hide photo and logo */
+@media (max-width: 1024px) {
+    .letterhead .side-block { display: none; }
+    .container { padding: 15px; }
+    .sub-page-container { padding: 15px; }
+    h1 { font-size: 24px; }
+    .tagline { font-size: 16px; line-height: 1.2; margin: 4px 0 0 0; }
+}
+
+/* Tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+    h1 { font-size: 20px; }
+    .tagline { font-size: 12px; line-height: 1.3; }
+    .sub-page-grid { gap: 12px; }
+    .sub-card { padding: 14px; }
+    .sub-card ul li { font-size: 12px; }
+    .sub-narrative { font-size: 12px; }
+}
+
+/* Tablet portrait */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+    h1 { font-size: 20px; }
+    .tagline { font-size: 12px; line-height: 1.3; }
+    .sub-page-grid { gap: 12px; }
+    .sub-card { padding: 14px; }
+    .sub-card ul li { font-size: 12px; }
+    .sub-narrative { font-size: 12px; }
+}
+
+/* Mobile landscape */
+@media (max-width: 926px) and (orientation: landscape) {
+    .letterhead .side-block { display: none; }
+    h1 { font-size: 18px; }
+    .tagline { font-size: 11px; line-height: 1.3; }
+    .sub-page-grid { gap: 12px; }
+    .sub-card { padding: 14px; }
+    .sub-card ul li { font-size: 12px; }
+    .sub-narrative { font-size: 12px; }
+}
+
+/* Mobile portrait */
 @media (max-width: 768px) and (orientation: portrait) {
-    .tagline {
-        line-height: 1.0;
-        margin-top: 4px;
-    }
+    .letterhead .side-block { display: none; }
+    h1 { font-size: 18px; letter-spacing: 1px; line-height: 1.3; }
+    .tagline { font-size: 12px; line-height: 1.4; margin-top: 6px; }
+    .sub-carousel-desktop { display: none; }
+    .sub-carousel-mobile { display: block; }
+    .extra-list li { font-size: 12px; }
 }

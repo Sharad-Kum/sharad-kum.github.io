@@ -6,224 +6,9 @@
 <title>Sharad Kumar | Solution</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-
-.page-section-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #e6e6e6;
-    padding-bottom: 6px;
-    margin-bottom: 14px;
-    margin-top: 16px;
-}
-
-.sub-carousel-section {
-    margin-top: 8px;
-    margin-bottom: 12px;
-}
-
-.sub-carousel-desktop { display: block; }
-
-.sub-page-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-}
-
-.sub-carousel-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 12px;
-}
-
-.sub-arrow {
-    background: rgba(212, 175, 55, 0.12);
-    border: 1px solid rgba(212, 175, 55, 0.5);
-    color: #d4af37;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
-    flex-shrink: 0;
-}
-
-.sub-arrow:hover { background: rgba(212, 175, 55, 0.25); }
-
-.sub-counter {
-    font-size: 12px;
-    color: #a0a0a0;
-    min-width: 40px;
-    text-align: center;
-}
-
-.sub-carousel-mobile { display: none; }
-
-.sub-swipe-wrapper { display: flex; align-items: stretch; }
-
-.sub-swipe-sidebar {
-    width: 28px;
-    min-width: 28px;
-    background: rgba(212, 175, 55, 0.12);
-    border: 1px solid rgba(212, 175, 55, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: #d4af37;
-    font-size: 15px;
-    user-select: none;
-    flex-shrink: 0;
-}
-
-.sub-swipe-sidebar.left { border-radius: 8px 0 0 8px; border-right: none; }
-.sub-swipe-sidebar.right { border-radius: 0 8px 8px 0; border-left: none; }
-.sub-swipe-sidebar:hover { background: rgba(212, 175, 55, 0.25); }
-
-.sub-swipe-viewport {
-    flex: 1;
-    overflow: hidden;
-    border: 1px solid rgba(212, 175, 55, 0.4);
-    border-left: none;
-    border-right: none;
-}
-
-.sub-swipe-track {
-    display: flex;
-    transition: transform 0.35s ease;
-    will-change: transform;
-}
-
-.sub-swipe-counter {
-    text-align: center;
-    font-size: 11px;
-    color: #a0a0a0;
-    margin-top: 8px;
-}
-
-.sub-card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(212, 175, 55, 0.4);
-    border-radius: 10px;
-    padding: 18px;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-}
-
-.sub-card h3 {
-    color: #d4af37;
-    font-size: 15px;
-    font-weight: 700;
-    margin: 0 0 6px 0;
-    line-height: 1.3;
-}
-
-.sub-mandate {
-    font-size: 12px;
-    color: #d4af37;
-    font-style: italic;
-    margin-bottom: 8px;
-    line-height: 1.4;
-}
-
-.sub-narrative {
-    font-size: 13px;
-    color: #d1d5db;
-    margin-bottom: 10px;
-    line-height: 1.4;
-}
-
-.sub-card ul {
-    padding-left: 16px;
-    margin: 0 0 10px 0;
-    flex: 1;
-}
-
-.sub-card ul li {
-    font-size: 13px;
-    color: #cfcfcf;
-    line-height: 1.4;
-    margin-bottom: 6px;
-}
-
-.sub-outcome {
-    font-size: 12px;
-    color: #22c55e;
-    font-weight: 600;
-    margin-top: 4px;
-    padding-top: 8px;
-    border-top: 1px solid rgba(212, 175, 55, 0.2);
-}
-
-.extra-section { margin-top: 16px; margin-bottom: 16px; }
-
-.extra-list { list-style: none; padding: 0; margin: 8px 0 0 0; }
-
-.extra-list li {
-    font-size: 13px;
-    color: #cfcfcf;
-    line-height: 1.5;
-    padding-left: 16px;
-    position: relative;
-    margin-bottom: 6px;
-}
-
-.extra-list li::before {
-    content: '◆';
-    color: #d4af37;
-    font-size: 8px;
-    position: absolute;
-    left: 0;
-    top: 4px;
-}
-
-@media (max-width: 768px) and (orientation: portrait) {
-    .sub-carousel-desktop { display: none; }
-    .sub-carousel-mobile { display: block; }
-    .letterhead .side-block { display: none; }
-    h1 { font-size: 18px; letter-spacing: 1px; line-height: 1.3; }
-    .tagline { font-size: 12px; line-height: 1.4; margin-top: 6px; }
-    .extra-list li { font-size: 12px; }
-}
-
-@media (max-width: 926px) and (orientation: landscape) {
-    .letterhead .side-block { display: none; }
-    h1 { font-size: 18px; }
-    .tagline { font-size: 11px; line-height: 1.3; }
-    .sub-page-grid { gap: 12px; }
-    .sub-card { padding: 14px; }
-    .sub-card ul li { font-size: 12px; }
-    .sub-narrative { font-size: 12px; }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
-    h1 { font-size: 20px; }
-    .tagline { font-size: 12px; line-height: 1.3; }
-    .sub-page-grid { gap: 12px; }
-    .sub-card { padding: 14px; }
-    .sub-card ul li { font-size: 12px; }
-    .sub-narrative { font-size: 12px; }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
-    h1 { font-size: 20px; }
-    .tagline { font-size: 12px; line-height: 1.3; }
-    .sub-page-grid { gap: 12px; }
-    .sub-card { padding: 14px; }
-}
-
-</style>
 </head>
-
 <body>
-<div class="container">
+<div class="sub-page-container">
 
 <div class="letterhead">
     <div class="side-block"></div>
@@ -233,9 +18,7 @@
     </div>
     <div class="side-block">
         <svg viewBox="0 0 120 120" width="100" height="100">
-            <defs>
-                <path id="bottom-arc" d="M 15,60 A 45,45 0 0,0 105,60"/>
-            </defs>
+            <defs><path id="bottom-arc" d="M 15,60 A 45,45 0 0,0 105,60"/></defs>
             <image href="logo.png" x="20" y="15" width="80" height="80" style="filter: brightness(2.5) saturate(3) hue-rotate(5deg);"/>
             <text font-size="11" fill="#d4af37" font-family="Segoe UI, sans-serif" font-weight="500" letter-spacing="2">
                 <textPath href="#bottom-arc">Addicted to Results</textPath>
@@ -245,7 +28,10 @@
 </div>
 
 <div class="sub-carousel-section">
-    <div class="page-section-title">Solution Architecture</div>
+    <div class="page-header-row">
+        <div class="page-section-title">Solution Architecture</div>
+        <a href="index.html"><i class="fas fa-arrow-up"></i> Back to Main</a>
+    </div>
 
     <div class="sub-carousel-desktop">
         <div class="sub-page-grid" id="desktop-grid"></div>
@@ -257,7 +43,7 @@
     </div>
 
     <div class="sub-carousel-mobile">
-        <div style="font-size: 11px; color: #a0a0a0; margin-bottom: 8px;">Swipe to explore</div>
+        <div style="font-size:11px;color:#a0a0a0;margin-bottom:8px;">Swipe to explore</div>
         <div class="sub-swipe-wrapper">
             <div class="sub-swipe-sidebar left" onclick="mobileNav(-1)">&#8592;</div>
             <div class="sub-swipe-viewport">
@@ -278,12 +64,7 @@
     </ul>
 </div>
 
-<div class="back-to-main">
-    <a href="index.html"><i class="fas fa-arrow-up"></i> Back to Main</a>
 </div>
-
-</div>
-
 <script>
 const cards = [
     {
@@ -364,14 +145,12 @@ function buildMobileCards() {
     cards.forEach(card => {
         const div = document.createElement('div');
         div.className = 'sub-card';
-        div.style.cssText = 'min-width:100%; max-width:100%; flex-shrink:0; box-sizing:border-box;';
-        div.innerHTML = `
-            <h3>${card.title}</h3>
+        div.style.cssText = 'min-width:100%;max-width:100%;flex-shrink:0;box-sizing:border-box;';
+        div.innerHTML = `<h3>${card.title}</h3>
             <div class="sub-mandate">Mandate: ${card.mandate}</div>
             <div class="sub-narrative">${card.narrative}</div>
             <ul>${card.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
-            <div class="sub-outcome">${card.outcome}</div>
-        `;
+            <div class="sub-outcome">${card.outcome}</div>`;
         track.appendChild(div);
     });
     updateMobile();
@@ -391,14 +170,24 @@ function mobileNav(dir) {
 }
 
 let touchStartX = 0;
+
 function initTouch() {
     const track = document.getElementById('mobile-track');
-    if (!track) return;
-    track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-    track.addEventListener('touchend', e => {
-        const diff = touchStartX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 40) mobileNav(diff > 0 ? 1 : -1);
-    }, { passive: true });
+    if (track) {
+        track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+        track.addEventListener('touchend', e => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) mobileNav(diff > 0 ? 1 : -1);
+        }, { passive: true });
+    }
+    const grid = document.getElementById('desktop-grid');
+    if (grid) {
+        grid.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+        grid.addEventListener('touchend', e => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) desktopNav(diff > 0 ? 1 : -1);
+        }, { passive: true });
+    }
 }
 
 window.addEventListener('load', () => { renderDesktop(); buildMobileCards(); initTouch(); });

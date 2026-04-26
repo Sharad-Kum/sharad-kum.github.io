@@ -155,8 +155,8 @@ h1 {
    --------------------------------------------- */
 
 .back-to-main {
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     text-align: right;
 }
 
@@ -370,7 +370,7 @@ h1 {
 
 .extra-section {
     margin-top: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .extra-list {
@@ -395,6 +395,12 @@ h1 {
     position: absolute;
     left: 0;
     top: 4px;
+}
+
+@media (min-width: 927px) {
+    .page-header-row a {
+        display: none;
+    }
 }
 
 

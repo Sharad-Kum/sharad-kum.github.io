@@ -320,9 +320,11 @@
      ------------------------------------------- */
 .engage-icons {
     display: flex;
-    flex-direction: column;
-    gap: clamp(10px, 1.5vw, 18px);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 16px;
     margin-top: 10px;
+    align-items: center;
 }
 
 .engage-icons a {
@@ -395,6 +397,11 @@
     /* swipe-more hidden on wide */
     #swipe-more { display: none; }
 
+.engage-icons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(10px, 1.5vw, 18px);
+}
 }
 </style>
 </head>

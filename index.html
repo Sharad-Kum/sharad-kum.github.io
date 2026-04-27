@@ -16,123 +16,154 @@
 <title>Sharad Kumar | Portfolio - Growth, Solution & Delivery Leadership</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
- 
+
 <style>
- 
 /* =============================================
-   IMPACT SNAPSHOT
+   INDEX-SPECIFIC STYLES ONLY
+   Everything in style.css is already inherited.
+   This block covers: impact boxes, carousel
+   columns, bottom grid, engage icons.
    ============================================= */
- 
-.impact {
-    max-width: 1000px;
-    margin: 20px auto;
-    text-align: center;
-}
- 
-.impact-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
- 
-.impact-row {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 5px;
-}
- 
-.box {
-    width: 185px;
-    min-width: 185px;
-    max-width: 185px;
-    height: 35px;
-    border: 1px solid #a88c3a;
-    background-color: #333;
-    border-radius: 10px;
-    padding: 10px 12px;
-    text-align: center;
-    font-size: 13px;
-    line-height: 1.0;
-    color: white;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
- 
-.box b {
-    display: block;
-    color: #d4af37;
-    font-size: 16px;
-    margin-bottom: 4px;
-}
- 
-.section-title {
-    border-bottom: 1px solid #d4af37;
-    padding-bottom: 5px;
-}
- 
+
+/* --- Intro paragraph --- */
 .intro {
     text-align: center;
     max-width: 1100px;
-    margin: -20px auto 5px auto;
-    font-size: 14px;
-    line-height: 1.2;
+    margin: 0 auto 8px auto;
+    font-size: var(--font-sm);
+    line-height: 1.4;
 }
- 
-/* =============================================
-   CAROUSEL — SHARED
-   ============================================= */
- 
-.carousel-section {
-    margin-top: 12px;
+
+/* --- Impact Snapshot --- */
+.impact {
+    text-align: center;
+    margin: 8px auto 10px auto;
+}
+
+.impact-title {
+    font-size: clamp(16px, 2.5vw, 24px);
+    font-weight: bold;
     margin-bottom: 10px;
 }
- 
+
+/* Wide: two rows of boxes in a flex row */
+.impact-row {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap);
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+}
+
+.box {
+    border: 1px solid #a88c3a;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 8px 10px;
+    text-align: center;
+    font-size: var(--font-xs);
+    line-height: 1.2;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Fluid width — fits naturally in flex row */
+    flex: 1 1 120px;
+    max-width: 180px;
+    min-height: 50px;
+}
+
+.box b {
+    display: block;
+    color: var(--gold);
+    font-size: clamp(13px, 1.6vw, 16px);
+    margin-bottom: 3px;
+}
+
+/* --- Work at a Glance header row --- */
+.glance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 0 8px 0;
+}
+
+.glance-header .impact-title {
+    margin: 0;
+}
+
+/* --- Desktop: three carousel columns --- */
+.carousel-section {
+    margin-bottom: 10px;
+}
+
+.carousel-desktop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+}
+
+.carousel-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-col-title {
+    background: var(--gold-bg-solid);
+    border: 1px solid var(--gold-faint);
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    padding: 8px 14px;
+    font-size: clamp(12px, 1.4vw, 15px);
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 .carousel-card {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(212, 175, 55, 0.5);
     border-top: none;
     border-radius: 0 0 8px 8px;
-    padding: 16px;
+    padding: 14px;
     display: flex;
     flex-direction: column;
-    height: 220px;
-    box-sizing: border-box;
+    min-height: 190px;
+    flex: 1;
     overflow: hidden;
 }
- 
+
 .carousel-card-title {
-    font-size: 14px;
+    font-size: var(--font-sm);
     font-weight: 600;
-    color: #d4af37;
+    color: var(--gold);
     margin-bottom: 8px;
     line-height: 1.3;
 }
- 
+
 .carousel-card-desc {
-    font-size: 13px;
-    color: #cfcfcf;
-    line-height: 1.5;
+    font-size: var(--font-sm);
+    color: var(--text-primary);
+    line-height: 1.8;
     flex: 1;
     overflow: hidden;
     white-space: pre-line;
 }
- 
+
 .carousel-nav {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
     margin-top: 10px;
-    padding-top: 6px;
 }
- 
+
 .carousel-arrow {
     background: none;
-    border: 1px solid rgba(212, 175, 55, 0.5);
-    color: #d4af37;
+    border: 1px solid var(--gold-faint);
+    color: var(--gold);
     width: 28px;
     height: 28px;
     border-radius: 50%;
@@ -144,111 +175,56 @@
     transition: background 0.2s;
     flex-shrink: 0;
 }
- 
-.carousel-arrow:hover {
-    background: rgba(212, 175, 55, 0.15);
-}
- 
+
+.carousel-arrow:hover { background: rgba(212, 175, 55, 0.15); }
+
 .carousel-counter {
-    font-size: 12px;
-    color: #a0a0a0;
+    font-size: var(--font-xs);
+    color: var(--text-muted);
     min-width: 30px;
     text-align: center;
 }
- 
+
 .carousel-more {
     text-align: right;
     margin-top: 6px;
-    font-size: 12px;
+    font-size: var(--font-xs);
 }
- 
-.carousel-more a {
-    color: #4da3ff;
-    text-decoration: none;
-}
- 
-.carousel-more a:hover {
-    text-decoration: underline;
-}
- 
-/* =============================================
-   DESKTOP: three carousels side by side
-   ============================================= */
- 
-.carousel-desktop {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
- 
-.carousel-col {
-    display: flex;
-    flex-direction: column;
-}
- 
-.carousel-col-title {
-    background: rgba(212, 175, 55, 0.85);
-    border: 1px solid rgba(212, 175, 55, 0.5);
-    border-bottom: none;
-    border-radius: 6px 6px 0 0;
-    padding: 8px 14px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #1a1a2e;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    text-align: center;
-}
- 
-/* =============================================
-   MOBILE/TABLET: stacked accordion carousel
-   ============================================= */
- 
-.carousel-mobile {
-    display: none;
-}
+
+.carousel-more a { color: var(--text-link); text-decoration: none; }
+.carousel-more a:hover { text-decoration: underline; }
+
+/* --- Mobile swipe carousel (index) --- */
+.carousel-mobile { display: none; }
 
 .swipe-wrapper {
     display: flex;
     align-items: stretch;
-    gap: 0;
-    margin: 0;
 }
 
 .swipe-sidebar {
-    width: 32px;
-    min-width: 32px;
-    background: rgba(212, 175, 55, 0.12);
-    border: 1px solid rgba(212, 175, 55, 0.4);
+    width: 30px;
+    min-width: 30px;
+    background: rgba(212, 175, 55, 0.25);
+    border: 1px solid var(--gold-mid);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: #d4af37;
-    font-size: 16px;
+    color: var(--gold);
+    font-size: 15px;
     user-select: none;
     flex-shrink: 0;
 }
 
-.swipe-sidebar.left {
-    border-radius: 8px 0 0 8px;
-    border-right: none;
-}
-
-.swipe-sidebar.right {
-    border-radius: 0 8px 8px 0;
-    border-left: none;
-}
-
-.swipe-sidebar:hover {
-    background: rgba(212, 175, 55, 0.25);
-}
+.swipe-sidebar.left  { border-radius: 8px 0 0 8px; border-right: none; }
+.swipe-sidebar.right { border-radius: 0 8px 8px 0; border-left: none; }
+.swipe-sidebar:hover { background: rgba(212, 175, 55, 0.4); }
 
 .swipe-viewport {
     flex: 1;
     overflow: hidden;
-    border: 1px solid rgba(212, 175, 55, 0.4);
+    border: 1px solid var(--gold-faint);
     border-left: none;
     border-right: none;
 }
@@ -263,10 +239,11 @@
     min-width: 100%;
     max-width: 100%;
     background: rgba(255, 255, 255, 0.06);
-    padding: 16px;
+    padding: 14px;
     box-sizing: border-box;
     flex-shrink: 0;
-    min-height: 180px;
+    min-height: 170px;
+    color: #e8e8e8;
 }
 
 .swipe-card-section {
@@ -279,185 +256,162 @@
 }
 
 .swipe-card-title {
-    font-size: 14px;
+    font-size: var(--font-sm);
     font-weight: 600;
-    color: #d4af37;
-    margin-bottom: 10px;
+    color: var(--gold);
+    margin-bottom: 8px;
     line-height: 1.3;
 }
 
 .swipe-card-desc {
-    font-size: 13px;
-    color: #cfcfcf;
-    line-height: 1.25;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    font-size: var(--font-sm);
+    color: e8e8e8;
+    line-height: 1.4;
     white-space: pre-line;
-    margin-top: 4px;
 }
 
 .swipe-counter {
     text-align: center;
-    font-size: 11px;
-    color: #a0a0a0;
+    font-size: var(--font-xs);
+    color: var(--text-muted);
     margin-top: 8px;
 }
 
-.mob-section-content.active {
-    display: block;
-}
- 
-/* =============================================
-   BOTTOM SECTION
-   ============================================= */
- 
+/* --- Bottom section: Thought Leadership + Engage --- */
 .bottom {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    margin-top: 10px;
+    grid-template-columns: 3fr 1fr;
+    gap: var(--gap);
+    margin-top: 12px;
 }
- 
+
 .compact-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
- 
+
 .compact-list li {
     display: flex;
     align-items: flex-start;
+    gap: 8px;
     margin-bottom: 8px;
-    font-size: 13px;
-    color: #cfcfcf;
+    font-size: var(--font-sm);
+    color: var(--text-primary);
+    line-height: 1.5;
 }
- 
-.compact-list li span { color: #cfcfcf; }
- 
+
+.compact-list li span { color: var(--text-primary); }
+
 .compact-list i {
-    color: #d4af37;
-    margin-right: 8px;
+    color: var(--gold);
     margin-top: 2px;
     flex-shrink: 0;
+    font-size: 14px;
+    width: 16px;
+    text-align: center;
 }
- 
-.compact-list strong { color: #d4af37; }
- 
+
+.compact-list strong { color: var(--gold); }
+
+/* --- Engage with Me icons ---
+     Column on all widths — no wrapping, no splitting.
+     Gap scales with viewport so they breathe on wide,
+     stay compact on narrow.
+     ------------------------------------------- */
 .engage-icons {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin-top: 15px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: clamp(10px, 1.5vw, 18px);
+    margin-top: 10px;
 }
- 
+
 .engage-icons a {
     display: flex;
     align-items: center;
     gap: 10px;
     text-decoration: none;
 }
- 
+
 .engage-icons a:link,
 .engage-icons a:visited,
 .engage-icons a:hover,
 .engage-icons a:active { text-decoration: none; }
- 
+
 .engage-icons a i {
-    width: 20px;
+    width: 18px;
+    font-size: 16px;
+    color: var(--gold);
     text-align: center;
-    font-size: 20px;
+    flex-shrink: 0;
+    /* vertically centred by parent align-items: center */
 }
- 
+
 .engage-icons a span {
-    color: #ffffff;
-    font-size: 13px;
-    opacity: 1;
-    margin-top: 4px;
-}
- 
-/* =============================================
-   RESPONSIVE
-   ============================================= */
- 
-/* Tablet Landscape — mirrors desktop */
-@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
-     h1 { font-size: 22px; }
-    .tagline { font-size: 13px; line-height: 1.3; }
-    .intro { font-size: 13px; margin: 4px auto 4px auto; line-height: 1.3; }
-    .impact { display: block; max-width: 100%; padding: 0 8px; }
-    .impact-row { display: flex; flex-wrap: nowrap; justify-content: center; gap: 8px; margin-bottom: 8px; }
-    .box { flex: 0 0 calc(20% - 8px); min-width: unset; max-width: unset; font-size: 11px; padding: 6px 4px; height: auto; min-height: 45px; box-sizing: border-box; }
-    .box b { font-size: 13px; margin-bottom: 2px; }
-    .carousel-desktop { gap: 14px; }
-    .carousel-card { height: 200px; }
-    .bottom { grid-template-columns: 2fr 1fr; margin-top: 12px; }
-    .container { padding: 10px 12px; }
-}
- 
-/* Tablet Portrait — keeps photo/logo */
-@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
-    .letterhead .side-block { display: flex; }
-    .profile-pic { width: 55px; height: 55px; }
-    h1 { font-size: 18px; }
-    .tagline { font-size: 11px; line-height: 1.3; }
-    .intro { font-size: 11px; margin: 4px auto 4px auto; line-height: 1.3; }
-    .impact { display: block; max-width: 100%; padding: 0 8px; }
-    .impact-row { display: flex; flex-wrap: nowrap; justify-content: center; gap: 6px; margin-bottom: 6px; }
-    .box { flex: 0 0 calc(20% - 6px); min-width: unset; max-width: unset; font-size: 10px; padding: 5px 4px; height: auto; min-height: 40px; box-sizing: border-box; }
-    .box b { font-size: 12px; margin-bottom: 2px; }
-    .carousel-desktop { display: none; }
-    .carousel-mobile { display: block; }
-    .bottom { display: grid; grid-template-columns: 2fr 1fr; margin-top: 12px; }
-    .container { padding: 8px 10px; }
+    color: var(--text-primary);
+    font-size: var(--font-sm);
+    line-height: 1;
 }
 
-/* Mobile Landscape — no photo/logo */
-@media (max-width: 926px) and (orientation: landscape) {
-    .letterhead .side-block { display: none; }
-    h1 { font-size: 18px; }
-    .tagline { font-size: 11px; line-height: 1.3; }
-    .intro { font-size: 11px; margin: 4px auto 4px auto; line-height: 1.3; }
-    .impact { display: block; max-width: 100%; padding: 0 8px; }
-    .impact-row { display: flex; flex-wrap: nowrap; justify-content: center; gap: 6px; margin-bottom: 6px; }
-    .box { flex: 0 0 calc(20% - 6px); min-width: unset; max-width: unset; font-size: 10px; padding: 5px 4px; height: auto; min-height: 40px; box-sizing: border-box; }
-    .box b { font-size: 12px; margin-bottom: 2px; }
-    .carousel-desktop { display: none; }
-    .carousel-mobile { display: block; }
-    .bottom { display: grid; grid-template-columns: 2fr 1fr; margin-top: 12px; }
-    .container { padding: 8px 10px; }
-}
- 
-/* Mobile Portrait */
-@media (max-width: 768px) and (orientation: portrait) {
-    .side-block { display: none; }
-    h1 { font-size: 18px; letter-spacing: 1px; line-height: 1.3; }
-    .tagline { font-size: 12px; line-height: 1.4; margin-top: 6px; margin-bottom: 4px; }
-    .intro { font-size: 12px; line-height: 1.4; margin-top: 10px; margin-bottom: 0; }
-    .impact { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 0 6px; margin-bottom: 8px; }
-    .impact-title { grid-column: 1 / -1; font-size: 16px; margin-bottom: 8px; }
+/* --- Compact overrides (≤700px) --- */
+@media (max-width: 700px) {
+
+    /* Intro tighter */
+    .intro { margin-top: 4px; }
+
+    /* Impact: 3-column grid, all boxes equal */
+    .impact { padding: 0 4px; }
     .impact-row { display: contents; }
-    .box { min-width: unset; max-width: unset; width: 100%; height: auto; min-height: unset; font-size: 10px; padding: 4px 3px; box-sizing: border-box; line-height: 1.3; }
-    .box b { font-size: 11px; margin-bottom: 2px; }
+    .impact {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+    }
+    .impact-title { grid-column: 1 / -1; font-size: 16px; margin-bottom: 6px; }
+    .box {
+        flex: none;
+        max-width: none;
+        width: 100%;
+        min-height: 44px;
+        padding: 4px 3px;
+    }
+    .box b { font-size: 11px; }
+
+    /* Swap carousel: desktop hidden, mobile shown */
     .carousel-desktop { display: none; }
-    .carousel-mobile { display: block; }
-    .bottom { display: block; margin-top: 16px; }
-    .compact-list li { font-size: 12px; }
-    .engage { margin-top: 12px; }
+    .carousel-mobile  { display: block; }
+
+    /* Bottom: stack vertically */
+    .bottom { grid-template-columns: 1fr; }
+
+    /* swipe-more link visible on compact */
+    #swipe-more { display: block; }
 }
 
-@media (min-width: 1025px) {
-    #swipe-more {
-        display: none;
-    }
+.engage-icons {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 14px;
+    align-items: left;
 }
- 
+.engage-icons a span {
+    font-size: 11px;
+}
+
+/* --- Wide overrides (≥701px) --- */
+@media (min-width: 701px) {
+    .carousel-desktop { display: grid; }
+    .carousel-mobile  { display: none; }
+    /* swipe-more hidden on wide */
+    #swipe-more { display: none; }
+}
 </style>
 </head>
- 
+
 <body>
- 
+
 <div class="container">
- 
+
 <!-- LETTERHEAD -->
 <div class="letterhead">
     <div class="side-block">
@@ -468,7 +422,7 @@
         <p class="tagline">Operating at the intersection of Markets, Technology and Delivery</p>
     </div>
     <div class="side-block">
-        <svg viewBox="0 0 120 120" width="100" height="100">
+        <svg viewBox="0 0 120 120" width="80" height="80">
             <defs>
                 <path id="bottom-arc" d="M 15,60 A 45,45 0 0,0 105,60"/>
             </defs>
@@ -479,10 +433,10 @@
         </svg>
     </div>
 </div>
- 
+
 <!-- INTRO -->
 <p class="intro">I partner with enterprise leaders to drive go-to-market strategy, shape AI and cloud enabled systems, modernize processes, drive techno-commercial proposals, establish scalable delivery and enable workforce transformation for measurable outcomes.</p>
- 
+
 <!-- IMPACT SNAPSHOT -->
 <div class="impact">
     <div class="impact-title">IMPACT SNAPSHOT</div>
@@ -500,16 +454,19 @@
         <div class="box"><b>$47 M</b> P&amp;L Ownership</div>
     </div>
 </div>
- 
+
+<!-- WORK AT A GLANCE HEADER -->
+<div class="glance-header">
+    <div class="impact-title">WORK AT A GLANCE</div>
+    <div id="swipe-more" style="font-size:12px;"></div>
+</div>
+
 <!-- CAROUSEL SECTION -->
-<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px; margin-bottom: 8px;">
-    <div class="impact-title" style="margin: 0;">WORK AT A GLANCE</div>
-    <div id="swipe-more" style="font-size: 12px;"></div>
-</div><div class="carousel-section">
- 
-    <!-- DESKTOP: three carousels side by side -->
+<div class="carousel-section">
+
+    <!-- WIDE: three columns side by side -->
     <div class="carousel-desktop">
- 
+
         <!-- Growth -->
         <div class="carousel-col">
             <div class="carousel-col-title">Growth</div>
@@ -524,7 +481,7 @@
             </div>
             <div class="carousel-more"><a href="gtm.html">More on Growth &rarr;</a></div>
         </div>
- 
+
         <!-- Solution -->
         <div class="carousel-col">
             <div class="carousel-col-title">Solution</div>
@@ -539,7 +496,7 @@
             </div>
             <div class="carousel-more"><a href="solution.html">More on Solution &rarr;</a></div>
         </div>
- 
+
         <!-- Delivery -->
         <div class="carousel-col">
             <div class="carousel-col-title">Delivery</div>
@@ -554,23 +511,23 @@
             </div>
             <div class="carousel-more"><a href="delivery.html">More on Delivery &rarr;</a></div>
         </div>
- 
+
     </div>
- 
-<!-- MOBILE/TABLET: stacked accordion carousel -->
+
+    <!-- COMPACT: single swipe carousel -->
     <div class="carousel-mobile">
-    <div style="font-size: 11px; color: #a0a0a0; margin-bottom: 8px;">Swipe to explore</div> 
-    <div class="swipe-wrapper">
-        <div class="swipe-sidebar left" onclick="swipeNav(-1)">&#8592;</div>
-        <div class="swipe-viewport">
-            <div class="swipe-track" id="swipe-track"></div>
+        <div class="swipe-wrapper">
+            <div class="swipe-sidebar left" onclick="swipeNav(-1)">&#8592;</div>
+            <div class="swipe-viewport">
+                <div class="swipe-track" id="swipe-track"></div>
+            </div>
+            <div class="swipe-sidebar right" onclick="swipeNav(1)">&#8594;</div>
         </div>
-        <div class="swipe-sidebar right" onclick="swipeNav(1)">&#8594;</div>
+        <div class="swipe-counter" id="swipe-counter">1 / 12</div>
     </div>
-    <div class="swipe-counter" id="swipe-counter">1 / 12</div>
-</div>  
+
 </div>
- 
+
 <!-- BOTTOM SECTION -->
 <div class="bottom">
     <div>
@@ -582,7 +539,7 @@
             <li><i class="fa-solid fa-trophy"></i><span><strong>Recognized</strong>: QA workshop South Korea, Laying process foundation for offshore delivery; Best Business Operator; multiple ACE awards.</span></li>
         </ul>
     </div>
-    <div class="engage">
+    <div>
         <div class="section-title">ENGAGE WITH ME</div>
         <div class="engage-icons">
             <a href="mailto:sharad.rsg@gmail.com?subject=Connect with Sharad">
@@ -600,83 +557,44 @@
         </div>
     </div>
 </div>
- 
-</div>
- 
+
+</div><!-- end .container -->
+
 <script>
 const data = {
     growth: [
-        {
-            title: "Market & Competitive Intelligence",
-            desc: "• Mapped ICPs & competitive landscape across geographies\n• Enabled differentiated positioning through briefings & messaging\n• Drove entry & expansion into Americas, ASEAN, ANZ, UK & Europe\n• Converted insights into aligned executable GTM strategy"
-        },
-        {
-            title: "Sales & Pursuit Leadership",
-            desc: "• Achieved 75%+ hit-to-win ratio across varied size pursuits\n• Led proposal defence, negotiations, contract & SOW structuring\n• Designed Business value assessment & ROI calculators\n• Structured ELAs, co-branded platforms & revenue-sharing constructs"
-        },
-        {
-            title: "Partnerships & Alliances",
-            desc: "• Built Joint GTM strategies with cloud & ecosystem partners\n• Co-developed SaaS platforms with revenue-sharing models\n• Led partnership with global & regional vendors like HP, CA Tech etc.\n• Led joint account planning & solutions for cross-portfolio expansion"
-        },
-        {
-            title: "Brand Positioning",
-            desc: "• Keynote & plenary speaker at national & international forums\n• Conducted executive analyst briefings for enhancing market credibility\n• Built thought leadership for DevOps, AI enabled transformations\n• Launched service lines with ROI-backed business & value assessments"
-        }
+        { title: "Market & Competitive Intelligence", desc: "• Mapped ICPs & competitive landscape across geographies\n• Enabled differentiated positioning through briefings & messaging\n• Drove entry & expansion into Americas, ASEAN, ANZ, UK & Europe\n• Converted insights into aligned executable GTM strategy" },
+        { title: "Sales & Pursuit Leadership", desc: "• Achieved 75%+ hit-to-win ratio across varied size pursuits\n• Led proposal defence, negotiations, contract & SOW structuring\n• Designed Business value assessment & ROI calculators\n• Structured ELAs, co-branded platforms & revenue-sharing constructs" },
+        { title: "Partnerships & Alliances", desc: "• Built Joint GTM strategies with cloud & ecosystem partners\n• Co-developed SaaS platforms with revenue-sharing models\n• Led partnership with global & regional vendors like HP, CA Tech etc.\n• Led joint account planning & solutions for cross-portfolio expansion" },
+        { title: "Brand Positioning", desc: "• Keynote & plenary speaker at national & international forums\n• Conducted executive analyst briefings for enhancing market credibility\n• Built thought leadership for DevOps, AI enabled transformations\n• Launched service lines with ROI-backed business & value assessments" }
     ],
     solution: [
-        {
-            title: "Cloud & SaaS Transformation",
-            desc: "• Architected migration of 6,000+ applications using 7R principles\n• Designed multi-cloud ecosystems with CI/CD & release orchestration\n• Built API & service virtualzation Platform-as-a-Service architectures\n• Constructed subscription & pay-per-use based as-a-service models "
-        },
-        {
-            title: "AI-Driven Engineering",
-            desc: "• Embedded ML-based predictive models for reliability forecasting\n• Designed AI-assisted traceability & stability model through SDLC\n• Built intelligent progression -> regression test minimising duplicity\n• Integrated AI enabled end-to-end automation through the SDLC"
-        },
-        {
-            title: "DevOps & Security",
-            desc: "• Architected DevSecOps ecosystems across req, dev, test & release\n• Implemented in-sprint progressive automation accelrating CI/CD\n• Engineered Service Virtualisation & Test Data Management platforms\n• Designed cloud-hosted Performance Engineering Lab (Pay-per-Use)"
-        },
-        {
-            title: "Data Analytics & Observability",
-            desc: "• Established BI-led engineering frameworks for operational excellence\n• Built live dashboard for SLA & schedule governance & visibility\n• Developed balanced scorecards as observability frameworks\n• Integrated predictive modelling for risk governance through SDLC"
-        }
+        { title: "Cloud & SaaS Transformation", desc: "• Architected migration of 6,000+ applications using 7R principles\n• Designed multi-cloud ecosystems with CI/CD & release orchestration\n• Built API & service virtualzation Platform-as-a-Service architectures\n• Constructed subscription & pay-per-use based as-a-service models" },
+        { title: "AI-Driven Engineering", desc: "• Embedded ML-based predictive models for reliability forecasting\n• Designed AI-assisted traceability & stability model through SDLC\n• Built intelligent progression -> regression test minimising duplicity\n• Integrated AI enabled end-to-end automation through the SDLC" },
+        { title: "DevOps & Security", desc: "• Architected DevSecOps ecosystems across req, dev, test & release\n• Implemented in-sprint progressive automation accelrating CI/CD\n• Engineered Service Virtualisation & Test Data Management platforms\n• Designed cloud-hosted Performance Engineering Lab (Pay-per-Use)" },
+        { title: "Data Analytics & Observability", desc: "• Established BI-led engineering frameworks for operational excellence\n• Built live dashboard for SLA & schedule governance & visibility\n• Developed balanced scorecards as observability frameworks\n• Integrated predictive modelling for risk governance through SDLC" }
     ],
     delivery: [
-        {
-            title: "Agile & Scrum Execution",
-            desc: "• Led global teams with Agile governance with workflow automation\n• Implemented tiered regression suites accelerating CI/CD cycles\n• Revived & Scaled engagements from 45 to 180+ FTE in 10 months\n• Established delivery CoE scaling from 40 mebers to 425 in 18 months"
-        },
-        {
-            title: "Stakeholder Management",
-            desc: "• Leading governing member for rebuilding $300M+ SBU\n• Managed P&L & profitability for global practices & portfolios\n• Led executive workshops aligning strategy & transformation roadmaps\n• Expectations resets while salvaging the at-risk global programs"
-        },
-        {
-            title: "Quality & Risk Management",
-            desc: "• Established automated predictive models for risk scoring & defects\n• Built self-healing regression suites & automation frameworks\n• Developed multi-vendor governance frameworks & process handbooks\n• Introduced tool based workload modeling for readiness prediction"
-        },
-        {
-            title: "Global Team Leadership",
-            desc: "• Built federated & non-federated Delivery CoEs with 425+ FTE\n• Established governance, handbooks & workforce transformation\n• Led delivery across Americas, UK & Europe, ANZ & ASEAN\n• Aligned operating models with delivery discipline & business outcomes"
-        }
+        { title: "Agile & Scrum Execution", desc: "• Led global teams with Agile governance with workflow automation\n• Implemented tiered regression suites accelerating CI/CD cycles\n• Revived & Scaled engagements from 45 to 180+ FTE in 10 months\n• Established delivery CoE scaling from 40 members to 425 in 18 months" },
+        { title: "Stakeholder Management", desc: "• Leading governing member for rebuilding $300M+ SBU\n• Managed P&L & profitability for global practices & portfolios\n• Led executive workshops aligning strategy & transformation roadmaps\n• Expectations resets while salvaging the at-risk global programs" },
+        { title: "Quality & Risk Management", desc: "• Established automated predictive models for risk scoring & defects\n• Built self-healing regression suites & automation frameworks\n• Developed multi-vendor governance frameworks & process handbooks\n• Introduced tool based workload modeling for readiness prediction" },
+        { title: "Global Team Leadership", desc: "• Built federated & non-federated Delivery CoEs with 425+ FTE\n• Established governance, handbooks & workforce transformation\n• Led delivery across Americas, UK & Europe, ANZ & ASEAN\n• Aligned operating models with delivery discipline & business outcomes" }
     ]
 };
+
 const idx = { growth: 0, solution: 0, delivery: 0 };
 
-// Build flat list of all 12 cards
 const allCards = [];
 ['growth', 'solution', 'delivery'].forEach(section => {
-    data[section].forEach(item => {
-        allCards.push({ section, ...item });
-    });
+    data[section].forEach(item => allCards.push({ section, ...item }));
 });
 
 let currentCard = 0;
 
-// Desktop render
 function renderDesktop(s) {
     const item = data[s][idx[s]];
     document.getElementById('d-' + s + '-title').textContent = item.title;
-    document.getElementById('d-' + s + '-desc').innerHTML = item.desc.replace(/\n/g, '<br><br>');
+    document.getElementById('d-' + s + '-desc').innerHTML = item.desc.replace(/\n/g, '<br>');
     document.getElementById('d-' + s + '-counter').textContent = (idx[s] + 1) + '/' + data[s].length;
 }
 
@@ -685,19 +603,17 @@ function move(s, dir) {
     renderDesktop(s);
 }
 
-// Build swipe cards
 function buildSwipeCards() {
     const track = document.getElementById('swipe-track');
     if (!track) return;
     track.innerHTML = '';
-    allCards.forEach((card, i) => {
+    allCards.forEach(card => {
         const div = document.createElement('div');
         div.className = 'swipe-card';
         div.innerHTML = `
             <div class="swipe-card-section">${card.section}</div>
             <div class="swipe-card-title">${card.title}</div>
-    	    <div class="swipe-card-desc">${card.desc.replace(/\n/g, '\n\n')}</div>
-        `;
+            <div class="swipe-card-desc">${card.desc.replace(/\n/g, '\n')}</div>`;
         track.appendChild(div);
     });
     updateSwipe();
@@ -717,32 +633,22 @@ function updateSwipe() {
     counter.textContent = (currentCard + 1) + ' / ' + allCards.length;
     if (more) {
         const section = allCards[currentCard].section;
-        const links = { growth: 'gtm.html', solution: 'solution.html', delivery: 'delivery.html' };
-        const labels = { growth: 'Growth', solution: 'Solution', delivery: 'Delivery' };
+        const links  = { growth: 'gtm.html', solution: 'solution.html', delivery: 'delivery.html' };
+        const labels = { growth: 'Growth',   solution: 'Solution',      delivery: 'Delivery' };
         more.innerHTML = `<a href="${links[section]}" style="color:#4da3ff;text-decoration:none;">More on ${labels[section]} &rarr;</a>`;
     }
 }
 
-// Touch swipe
 let touchStartX = 0;
-let touchEndX = 0;
 
 function initSwipe() {
     const track = document.getElementById('swipe-track');
     if (!track) return;
-
-    track.addEventListener('touchstart', e => {
-        touchStartX = e.touches[0].clientX;
+    track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend',   e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) swipeNav(diff > 0 ? 1 : -1);
     }, { passive: true });
-
-    track.addEventListener('touchend', e => {
-    touchEndX = e.changedTouches[0].clientX;
-    const diff = touchStartX - touchEndX;
-    if (Math.abs(diff) > 40) {
-        swipeNav(diff > 0 ? 1 : -1);
-    }
-}, { passive: true });
-
 }
 
 function init() {
@@ -753,6 +659,7 @@ function init() {
 }
 
 window.addEventListener('load', init);
-</script> 
+</script>
+
 </body>
 </html>

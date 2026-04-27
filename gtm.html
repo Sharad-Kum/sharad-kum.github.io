@@ -10,69 +10,73 @@
 <body>
 <div class="sub-page-container">
 
-<div class="letterhead">
-    <div class="side-block"></div>
-    <div class="header-center">
-        <h1>SHARAD KUMAR</h1>
-        <p class="tagline">Operating at the intersection of Markets, Technology and Delivery</p>
-    </div>
-    <div class="side-block">
-        <svg viewBox="0 0 120 120" width="100" height="100">
-            <defs><path id="bottom-arc" d="M 15,60 A 45,45 0 0,0 105,60"/></defs>
-            <image href="logo.png" x="20" y="15" width="80" height="80" style="filter: brightness(2.5) saturate(3) hue-rotate(5deg);"/>
-            <text font-size="11" fill="#d4af37" font-family="Segoe UI, sans-serif" font-weight="500" letter-spacing="2">
-                <textPath href="#bottom-arc">Addicted to Results</textPath>
-            </text>
-        </svg>
-    </div>
-</div>
-
-<div class="sub-carousel-section">
-    <div class="page-header-row">
-    <div class="page-section-title">Key GTM Approaches</div>
-    <a href="index.html"><i class="fas fa-arrow-up"></i> Back to Main</a>
-</div>
-
-    <div class="sub-carousel-desktop">
-        <div class="sub-page-grid" id="desktop-grid"></div>
-        <div class="sub-carousel-nav">
-            <button class="sub-arrow" onclick="desktopNav(-1)">&#8592;</button>
-            <span class="sub-counter" id="desktop-counter">1 / 2</span>
-            <button class="sub-arrow" onclick="desktopNav(1)">&#8594;</button>
+    <!-- LETTERHEAD -->
+    <div class="letterhead">
+        <div class="side-block"></div>
+        <div class="header-center">
+            <h1>SHARAD KUMAR</h1>
+            <p class="tagline">Operating at the intersection of Markets, Technology and Delivery</p>
+        </div>
+        <div class="side-block">
+            <svg viewBox="0 0 120 120" width="80" height="80">
+                <defs><path id="bottom-arc" d="M 15,60 A 45,45 0 0,0 105,60"/></defs>
+                <image href="logo.png" x="20" y="15" width="80" height="80" style="filter: brightness(2.5) saturate(3) hue-rotate(5deg);"/>
+                <text font-size="11" fill="#d4af37" font-family="Segoe UI, sans-serif" font-weight="500" letter-spacing="2">
+                    <textPath href="#bottom-arc">Addicted to Results</textPath>
+                </text>
+            </svg>
         </div>
     </div>
 
-    <div class="sub-carousel-mobile">
-        <div style="font-size:11px;color:#a0a0a0;margin-bottom:8px;">Swipe to explore</div>
-        <div class="sub-swipe-wrapper">
-            <div class="sub-swipe-sidebar left" onclick="mobileNav(-1)">&#8592;</div>
-            <div class="sub-swipe-viewport">
-                <div class="sub-swipe-track" id="mobile-track"></div>
+    <!-- CAROUSEL SECTION -->
+    <div class="sub-carousel-section">
+
+        <div class="page-header-row">
+            <div class="page-section-title">Key GTM Approaches</div>
+            <a href="index.html"><i class="fas fa-arrow-up"></i> Back to Main</a>
+        </div>
+
+        <!-- Wide: two-column grid -->
+        <div class="sub-carousel-desktop">
+            <div class="sub-page-grid" id="desktop-grid"></div>
+            <div class="sub-carousel-nav">
+                <button class="sub-arrow" onclick="desktopNav(-1)">&#8592;</button>
+                <span class="sub-counter" id="desktop-counter">1 / 2</span>
+                <button class="sub-arrow" onclick="desktopNav(1)">&#8594;</button>
             </div>
-            <div class="sub-swipe-sidebar right" onclick="mobileNav(1)">&#8594;</div>
         </div>
-        <div class="sub-swipe-counter" id="mobile-counter">1 / 4</div>
+
+        <!-- Compact: swipe carousel -->
+        <div class="sub-carousel-mobile">
+            <div class="sub-swipe-wrapper">
+                <div class="sub-swipe-sidebar left" onclick="mobileNav(-1)">&#8592;</div>
+                <div class="sub-swipe-viewport">
+                    <div class="sub-swipe-track" id="mobile-track"></div>
+                </div>
+                <div class="sub-swipe-sidebar right" onclick="mobileNav(1)">&#8594;</div>
+            </div>
+            <div class="sub-swipe-counter" id="mobile-counter">1 / 4</div>
+        </div>
+
     </div>
-</div>
 
-<div class="extra-section">
+    <!-- ADDITIONAL SECTION -->
     <div class="extra-section">
-    <div class="page-section-title">Additional GTM Approaches</div>
-    <ul class="extra-list">
-        <li>Designing pilot-led market entry models that allow validation of value propositions and pricing before committing to a scaled rollout</li>
-        <li>Aligning operating cadence across product, sales and delivery teams to ensure disciplined and synchronized GTM execution</li>
-        <li>Embedding governance structures and decision frameworks to continuously adapt GTM strategy in alignment to dynamic market signals and performance data</li>
-    </ul>
-</div>
+        <div class="page-section-title">Additional GTM Approaches</div>
+        <ul class="extra-list">
+            <li>Designing pilot-led market entry models that allow validation of value propositions and pricing before committing to a scaled rollout</li>
+            <li>Aligning operating cadence across product, sales and delivery teams to ensure disciplined and synchronized GTM execution</li>
+            <li>Embedding governance structures and decision frameworks to continuously adapt GTM strategy in alignment to dynamic market signals and performance data</li>
+        </ul>
+    </div>
 
-</ul>
-</div>
+    <!-- BACK TO MAIN -->
+    <div class="back-to-main">
+        <a href="index.html"><i class="fas fa-arrow-up"></i> Back to Main</a>
+    </div>
 
-<div class="back-to-main">
-    <a href="index.html"><i class="fas fa-arrow-up"></i> Back to Main</a>
-</div>
+</div><!-- end .sub-page-container -->
 
-</div>
 <script>
 const cards = [
     {

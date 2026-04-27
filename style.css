@@ -1,20 +1,68 @@
 /* =============================================
    SHARAD KUMAR PORTFOLIO — GLOBAL STYLESHEET
+   Fluid, device-agnostic. Two breakpoints only:
+     Compact  : max-width 700px  (narrow viewports — phones any orientation, small tablet portrait)
+     Wide      : min-width 701px  (tablets landscape, desktops)
+   All sizing via clamp() — no orientation hacks needed.
    ============================================= */
+
+
+/* ---------------------------------------------
+   0. DESIGN TOKENS
+   --------------------------------------------- */
+
+:root {
+    /* Typography — fluid between compact and wide */
+    --font-h1:       clamp(18px, 3.5vw, 30px);
+    --font-tagline:  clamp(12px, 1.8vw, 16px);
+    --font-base:     clamp(12px, 1.3vw, 14px);
+    --font-sm:       clamp(11px, 1.1vw, 13px);
+    --font-xs:       clamp(10px, 1vw,   12px);
+
+    /* Spacing — fluid */
+    --gap:           clamp(8px,  1.5vw, 16px);
+    --pad-page:      clamp(10px, 2vw,   25px);
+    --pad-card:      clamp(12px, 1.8vw, 18px);
+
+    /* Colours */
+    --gold:          #d4af37;
+    --gold-faint:    rgba(212, 175, 55, 0.4);
+    --gold-mid:      rgba(212, 175, 55, 0.75);
+    --gold-bg:       rgba(212, 175, 55, 0.12);
+    --gold-bg-solid: rgba(212, 175, 55, 0.85);
+    --text-primary:  #e8e8e8;
+    --text-muted:    #a0a0a0;
+    --text-gold:     #d4af37;
+    --text-green:    #22c55e;
+    --text-link:     #4da3ff;
+    --card-bg:       rgba(255, 255, 255, 0.04);
+    --card-border:   rgba(212, 175, 55, 0.4);
+}
 
 
 /* ---------------------------------------------
    1. RESET & BASE
    --------------------------------------------- */
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     font-weight: 400;
-    line-height: 1.4;
-    color: #e6e6e6;
+    font-size: var(--font-base);
+    line-height: 1.5;
+    color: var(--text-primary);
     background: radial-gradient(circle at top, #0b2233, #050d14);
     overflow-x: hidden;
+    /* Hide scrollbar all browsers */
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 img {
@@ -25,21 +73,17 @@ img {
 
 
 /* ---------------------------------------------
-   2. LAYOUT
+   2. PAGE CONTAINERS
    --------------------------------------------- */
 
-.container {
+.container,
+.sub-page-container {
     max-width: 1400px;
-    margin: auto;
-    padding: 25px 12px 10px 12px;
-    box-sizing: border-box;
+    margin: 0 auto;
+    padding: var(--pad-page) var(--pad-page) 10px;
 }
 
 .sub-page-container {
-    max-width: 1400px;
-    margin: auto;
-    padding: 25px 12px 10px 12px;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -52,59 +96,38 @@ img {
 
 h1 {
     text-align: center;
-    font-size: 30px;
+    font-size: var(--font-h1);
     font-weight: 600;
     letter-spacing: 2px;
-    margin: 0;
+    margin: 0 0 0px 0;
+    line-height: 1.2;
 }
 
 .tagline {
     text-align: center;
-    font-size: 16px;
+    font-size: var(--font-tagline);
     font-weight: 500;
-    color: #d4af37;
+    color: var(--gold);
     margin: 0;
     line-height: 1.2;
 }
 
+/* Section underline titles (index bottom, sub-pages) */
 .section-title {
-    font-size: 16px;
+    font-size: var(--font-base);
     font-weight: 600;
-    margin-top: 15px;
-    margin-bottom: 5px;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 5px;
+    margin-top: 12px;
+    margin-bottom: 8px;
 }
 
 .page-section-title {
-    font-size: 16px;
+    font-size: var(--font-base);
     font-weight: 600;
-    color: #e6e6e6;
+    color: var(--text-primary);
     padding-bottom: 6px;
-    margin-bottom: 14px;
-    margin-top: 8px;
-}
-
-/* Page header row — title + back link side by side */
-.page-header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 8px;
-    margin-bottom: 14px;
-}
-
-.page-header-row .page-section-title {
-    margin: 0;
-}
-
-.page-header-row a {
-    font-size: 13px;
-    color: #4da3ff;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.page-header-row a:hover {
-    text-decoration: underline;
+    margin: 8px 0 14px 0;
 }
 
 
@@ -114,9 +137,9 @@ h1 {
 
 .letterhead {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-between;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .header-center {
@@ -124,68 +147,81 @@ h1 {
     text-align: center;
 }
 
+/* Side blocks (photo + logo) — visible wide, hidden compact */
 .side-block {
-    width: 110px;
-    min-width: 110px;
-    height: 80px;
+    width: clamp(80px, 9vw, 110px);
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-/* ---------------------------------------------
-   5. PROFILE PHOTO — desktop only
-   --------------------------------------------- */
-
 .profile-pic {
     display: block;
-    width: 80px;
-    height: 80px;
+    width: clamp(55px, 6vw, 80px);
+    height: clamp(55px, 6vw, 80px);
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #d4af37;
+    border: 2px solid var(--gold);
     box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
 }
 
 
 /* ---------------------------------------------
-   6. NAVIGATION LINKS
+   5. NAVIGATION LINKS
    --------------------------------------------- */
 
-.back-to-main {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    text-align: right;
+/* Page header row: title left, back link right */
+.page-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0 14px 0;
 }
 
+.page-header-row .page-section-title {
+    margin: 0;
+}
+
+.page-header-row a,
 .back-to-main a {
-    color: #4da3ff;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: var(--font-sm);
+    color: var(--text-link);
     text-decoration: none;
+    white-space: nowrap;
 }
 
+.page-header-row a:hover,
 .back-to-main a:hover {
     text-decoration: underline;
 }
 
+/* Back to main — always bottom right */
+.back-to-main {
+    margin: 8px 0 4px 0;
+    text-align: right;
+}
+
+.back-to-main a {
+    font-size: var(--font-sm);
+    font-weight: 500;
+}
+
 .disabled-link {
-    color: #4da3ff;
+    color: var(--text-link);
     pointer-events: none;
     opacity: 0.6;
     cursor: default;
 }
 
-.section-block {
-    position: relative;
-    padding-bottom: 0;
+/* Hide top back-link on wide screens (shown via page-header-row only on compact) */
+@media (min-width: 701px) {
+    .page-header-row a { display: none; }
 }
 
 
 /* ---------------------------------------------
-   7. SUB-PAGE CAROUSEL
+   6. SUB-PAGE CAROUSEL — desktop/wide layout
    --------------------------------------------- */
 
 .sub-carousel-section {
@@ -195,6 +231,7 @@ h1 {
     margin-bottom: 12px;
 }
 
+/* Desktop view: two-column grid of cards */
 .sub-carousel-desktop {
     display: flex;
     flex-direction: column;
@@ -204,8 +241,9 @@ h1 {
 .sub-page-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: var(--gap);
     flex: 1;
+    align-items: stretch;
 }
 
 .sub-carousel-nav {
@@ -217,9 +255,9 @@ h1 {
 }
 
 .sub-arrow {
-    background: rgba(212, 175, 55, 0.12);
-    border: 1px solid rgba(212, 175, 55, 0.5);
-    color: #d4af37;
+    background: var(--gold-bg);
+    border: 1px solid var(--gold-mid);
+    color: var(--gold);
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -237,12 +275,13 @@ h1 {
 }
 
 .sub-counter {
-    font-size: 12px;
-    color: #a0a0a0;
+    font-size: var(--font-xs);
+    color: var(--text-muted);
     min-width: 40px;
     text-align: center;
 }
 
+/* Mobile swipe — hidden by default, shown on compact */
 .sub-carousel-mobile {
     display: none;
 }
@@ -255,36 +294,29 @@ h1 {
 .sub-swipe-sidebar {
     width: 28px;
     min-width: 28px;
-    background: rgba(212, 175, 55, 0.12);
-    border: 1px solid rgba(212, 175, 55, 0.4);
+    background: rgba(212, 175, 55, 0.25);
+    border: 1px solid var(--gold-mid);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: #d4af37;
+    color: var(--gold);
     font-size: 15px;
     user-select: none;
     flex-shrink: 0;
 }
 
-.sub-swipe-sidebar.left {
-    border-radius: 8px 0 0 8px;
-    border-right: none;
-}
-
-.sub-swipe-sidebar.right {
-    border-radius: 0 8px 8px 0;
-    border-left: none;
-}
+.sub-swipe-sidebar.left  { border-radius: 8px 0 0 8px; border-right: none; }
+.sub-swipe-sidebar.right { border-radius: 0 8px 8px 0; border-left: none; }
 
 .sub-swipe-sidebar:hover {
-    background: rgba(212, 175, 55, 0.25);
+    background: rgba(212, 175, 55, 0.4);
 }
 
 .sub-swipe-viewport {
     flex: 1;
     overflow: hidden;
-    border: 1px solid rgba(212, 175, 55, 0.4);
+    border: 1px solid var(--gold-faint);
     border-left: none;
     border-right: none;
 }
@@ -297,80 +329,105 @@ h1 {
 
 .sub-swipe-counter {
     text-align: center;
-    font-size: 11px;
-    color: #a0a0a0;
+    font-size: var(--font-xs);
+    color: var(--text-muted);
     margin-top: 8px;
 }
 
 
 /* ---------------------------------------------
-   8. SUB-PAGE CARDS
+   7. SUB-PAGE CARDS
    --------------------------------------------- */
 
 .sub-card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(212, 175, 55, 0.4);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 10px;
-    padding: 18px;
+    padding: var(--pad-card);
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
-    flex: 1;
+    flex: 1 1 auto;
 }
 
+/* Zone 1 — Title: 1 line, fixed */
 .sub-card h3 {
-    color: #d4af37;
-    font-size: 15px;
+    color: var(--gold);
+    font-size: clamp(13px, 1.4vw, 15px);
     font-weight: 700;
     margin: 0 0 6px 0;
     line-height: 1.3;
+    min-height: calc(1.3em * 1);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
+/* Zone 2 — Mandate: 2 lines, fixed */
 .sub-mandate {
-    font-size: 12px;
-    color: #d4af37;
+    font-size: var(--font-xs);
+    color: var(--gold);
     font-style: italic;
-    margin-bottom: 8px;
-    line-height: 1.4;
-}
-
-.sub-narrative {
-    font-size: 13px;
-    color: #d1d5db;
     margin-bottom: 10px;
     line-height: 1.4;
+    min-height: calc(1.4em * 2);
+    max-height: calc(1.4em * 2);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
+/* Zone 3 — Narrative: 4 lines, fixed */
+.sub-narrative {
+    font-size: var(--font-sm);
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    line-height: 1.5;
+    min-height: calc(1.5em * 4);
+    max-height: calc(1.5em * 4);
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Zone 4 — Bullets: free flowing, takes all remaining space */
 .sub-card ul {
     padding-left: 16px;
     margin: 0 0 10px 0;
     flex: 1;
+    overflow: visible;
 }
 
 .sub-card ul li {
-    font-size: 13px;
-    color: #cfcfcf;
-    line-height: 1.4;
-    margin-bottom: 6px;
+    font-size: var(--font-sm);
+    color: var(--text-primary);
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
+/* Zone 5 — Outcome: 3 lines reserved, pinned to bottom */
 .sub-outcome {
-    font-size: 12px;
-    color: #22c55e;
+    font-size: var(--font-xs);
+    color: var(--text-green);
     font-weight: 600;
-    margin-top: 4px;
-    padding-top: 8px;
+    margin-top: auto;
     border-top: 1px solid rgba(212, 175, 55, 0.2);
+    height: calc(1.4em * 3);
+    line-height: 1.4;
+    padding-top: calc(1.4em + 8px);
+    overflow: hidden;
+    flex-shrink: 0;
 }
-
 
 /* ---------------------------------------------
-   9. ADDITIONAL SECTION
+   8. EXTRA / ADDITIONAL SECTION (sub-pages)
    --------------------------------------------- */
 
 .extra-section {
-    margin-top: 8px;
-    margin-bottom: 4px;
+    margin-top: 10px;
+    margin-bottom: 6px;
 }
 
 .extra-list {
@@ -380,80 +437,65 @@ h1 {
 }
 
 .extra-list li {
-    font-size: 13px;
-    color: #cfcfcf;
+    font-size: var(--font-sm);
+    color: var(--text-primary);
     line-height: 1.5;
     padding-left: 16px;
     position: relative;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .extra-list li::before {
     content: '◆';
-    color: #d4af37;
+    color: var(--gold);
     font-size: 8px;
     position: absolute;
     left: 0;
     top: 4px;
 }
 
-@media (min-width: 927px) {
-    .page-header-row a {
-        display: none;
+
+/* ---------------------------------------------
+   9. COMPACT BREAKPOINT — max-width 700px
+   Covers: phones portrait, phones landscape,
+           small tablets portrait.
+   No orientation keyword needed — width is truth.
+   --------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    /* Hide photo and logo */
+    .letterhead .side-block { display: none; }
+
+    /* Switch sub-page carousel to swipe */
+    .sub-carousel-desktop { display: none; }
+    .sub-carousel-mobile  { display: block; }
+
+    /* Cards in swipe mode: full width */
+    .sub-card {
+        flex: 0 0 auto;
+        width: 100%;
     }
+
+    .extra-list li { font-size: var(--font-xs); }
 }
 
 
 /* ---------------------------------------------
-   10. RESPONSIVE
+   10. WIDE BREAKPOINT — min-width 701px
+   Covers: tablets landscape, desktops.
+   Show photo/logo, keep desktop carousel.
    --------------------------------------------- */
 
-/* Below desktop — hide photo and logo */
+@media (min-width: 701px) {
+    .sub-carousel-desktop { display: flex; }
+    .sub-carousel-mobile  { display: none; }
+}
+
+@media (min-width: 1025px) {
+    .letterhead .side-block { display: flex; }
+}
+
 @media (max-width: 1024px) {
     .letterhead .side-block { display: none; }
-    .container { padding: 15px; }
-    .sub-page-container { padding: 15px; }
-    h1 { font-size: 24px; }
-    .tagline { font-size: 16px; line-height: 1.2; margin: 4px 0 0 0; }
-}
-
-/* Tablet landscape */
-@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
-    h1 { font-size: 20px; }
-    .tagline { font-size: 12px; line-height: 1.3; }
-    .sub-page-grid { gap: 12px; }
-    .sub-card { padding: 14px; }
-    .sub-card ul li { font-size: 12px; }
-    .sub-narrative { font-size: 12px; }
-}
-
-/* Tablet portrait */
-@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
-    h1 { font-size: 20px; }
-    .tagline { font-size: 12px; line-height: 1.3; }
-    .sub-page-grid { gap: 12px; }
-    .sub-card { padding: 14px; }
-    .sub-card ul li { font-size: 12px; }
-    .sub-narrative { font-size: 12px; }
-}
-
-/* Mobile landscape */
-@media (max-width: 926px) and (orientation: landscape) {
-    .letterhead .side-block { display: none; }
-    h1 { font-size: 18px; }
-    .tagline { font-size: 11px; line-height: 1.3; }
-    .sub-page-grid { gap: 12px; }
-    .sub-card { padding: 14px; }
-    .sub-card ul li { font-size: 12px; }
-    .sub-narrative { font-size: 12px; }
-}
-
-/* Mobile portrait */
-@media (max-width: 768px) and (orientation: portrait) {
-    .letterhead .side-block { display: none; }
-    h1 { font-size: 18px; letter-spacing: 1px; line-height: 1.3; }
-    .tagline { font-size: 12px; line-height: 1.4; margin-top: 6px; }
-    .sub-carousel-desktop { display: none; }
-    .sub-carousel-mobile { display: block; }
-    .extra-list li { font-size: 12px; }
 }

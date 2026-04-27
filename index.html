@@ -264,7 +264,7 @@
 }
 
 .swipe-card-desc {
-    color: e8e8e8;
+    color: #e8e8e8;
     line-height: 1.4;
     white-space: pre-line;
 }
@@ -354,19 +354,22 @@
     line-height: 1;
 }
 
-/* Impact: equal-width boxes, row 2 centres naturally */
+/* --- Compact overrides (≤700px) --- */
+@media (max-width: 700px) {
+
+    /* Impact portrait: 3-column grid */
     .impact { padding: 0 4px; }
     .impact-title { font-size: 16px; margin-bottom: 6px; }
-    .impact-row {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
+    .impact-row { display: contents; }
+    .impact {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 6px;
-        margin-bottom: 6px;
     }
+    .impact-title { grid-column: 1 / -1; }
     .box {
-        flex: 0 0 calc(20% - 6px);
-        min-width: 0;
+        flex: none;
+        width: 100%;
         min-height: 44px;
         padding: 4px 3px;
         box-sizing: border-box;
@@ -384,6 +387,12 @@
     #swipe-more { display: block; }
 }
 
+/* --- Landscape override for impact only --- */
+@media (max-width: 700px) and (orientation: landscape) {
+    .impact-row { display: flex; flex-wrap: nowrap; justify-content: center; gap: 6px; margin-bottom: 6px; }
+    .impact { display: block; padding: 0 4px; }
+    .box { flex: 0 0 calc(20% - 6px); min-width: 0; width: auto; min-height: 44px; padding: 4px 3px; }
+}
 /* --- Wide overrides (≥701px) --- */
 @media (min-width: 701px) {
     .carousel-desktop { display: grid; }

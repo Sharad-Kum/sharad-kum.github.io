@@ -363,20 +363,22 @@
     .impact { padding: 0 4px; }
            .impact-title { font-size: 16px; margin-bottom: 6px; }
     .impact-row { display: contents; }
-          .impact {
+        .impact {
     	display: grid;
     	grid-template-columns: repeat(3, 1fr);
     	gap: 6px;
+	justify-items: center;
     }
-           .impact-title { grid-column: 1 / -1; }
+        .impact-title { grid-column: 1 / -1; }
   
-     .box {
-    	flex: none;
-   	 max-width: none;
-    	width: 100%;
-    	min-height: 44px;
-    	padding: 4px 3px;
-        }
+.box {
+    flex: none;
+    max-width: none;
+    width: 100%;
+    min-height: 44px;
+    padding: 4px 3px;
+    box-sizing: border-box;
+}
 
 .box b { font-size: 11px; }
 

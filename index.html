@@ -354,33 +354,24 @@
     line-height: 1;
 }
 
-/* --- Compact overrides (≤700px) --- */
-@media (max-width: 700px) {
-
-    /* Intro tighter */
-    .intro { margin-top: 4px; }
-    /* Impact: 3-column grid, all boxes equal */
+/* Impact: equal-width boxes, row 2 centres naturally */
     .impact { padding: 0 4px; }
-           .impact-title { font-size: 16px; margin-bottom: 6px; }
-    .impact-row { display: contents; }
-        .impact {
-    	display: grid;
-    	grid-template-columns: repeat(3, 1fr);
-    	gap: 6px;
-	justify-items: center;
+    .impact-title { font-size: 16px; margin-bottom: 6px; }
+    .impact-row {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 6px;
+        margin-bottom: 6px;
     }
-        .impact-title { grid-column: 1 / -1; }
-  
-.box {
-    flex: none;
-    max-width: none;
-    width: 100%;
-    min-height: 44px;
-    padding: 4px 3px;
-    box-sizing: border-box;
-}
-
-.box b { font-size: 11px; }
+    .box {
+        flex: 0 0 calc(20% - 6px);
+        min-width: 0;
+        min-height: 44px;
+        padding: 4px 3px;
+        box-sizing: border-box;
+    }
+    .box b { font-size: 11px; }
 
     /* Swap carousel: desktop hidden, mobile shown */
     .carousel-desktop { display: none; }

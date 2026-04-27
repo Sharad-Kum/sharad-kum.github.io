@@ -264,7 +264,6 @@
 }
 
 .swipe-card-desc {
-    font-size: var(--font-sm);
     color: e8e8e8;
     line-height: 1.4;
     white-space: pre-line;
@@ -358,24 +357,25 @@
 
     /* Intro tighter */
     .intro { margin-top: 4px; }
-
     /* Impact: 3-column grid, all boxes equal */
     .impact { padding: 0 4px; }
+           .impact-title { font-size: 16px; margin-bottom: 6px; }
     .impact-row { display: contents; }
-    .impact {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 6px;
+          .impact {
+    	display: grid;
+    	grid-template-columns: repeat(3, 1fr);
+    	gap: 6px;
     }
-    .impact-title { grid-column: 1 / -1; font-size: 16px; margin-bottom: 6px; }
-    .box {
-        flex: none;
-        max-width: none;
-        width: 100%;
-        min-height: 44px;
-        padding: 4px 3px;
-    }
-    .box b { font-size: 11px; }
+           .impact-title { grid-column: 1 / -1; }
+  .box {
+    	flex: none;
+   	 max-width: none;
+    	width: 100%;
+    	min-height: 44px;
+    	padding: 4px 3px;
+        }
+
+.box b { font-size: 11px; }
 
     /* Swap carousel: desktop hidden, mobile shown */
     .carousel-desktop { display: none; }
@@ -388,22 +388,13 @@
     #swipe-more { display: block; }
 }
 
-.engage-icons {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 14px;
-    align-items: left;
-}
-.engage-icons a span {
-    font-size: 11px;
-}
-
 /* --- Wide overrides (≥701px) --- */
 @media (min-width: 701px) {
     .carousel-desktop { display: grid; }
     .carousel-mobile  { display: none; }
     /* swipe-more hidden on wide */
     #swipe-more { display: none; }
+
 }
 </style>
 </head>

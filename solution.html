@@ -120,6 +120,7 @@ const cards = [
 
 function buildCard(card) {
     return `<div class="sub-card">
+    
         <h3>${card.title}</h3>
         <div class="sub-mandate">Mandate: ${card.mandate}</div>
         <div class="sub-narrative">${card.narrative}</div>
@@ -199,6 +200,7 @@ function initTouch() {
 }
 
 window.addEventListener('load', () => { renderDesktop(); buildMobileCards(); initTouch(); });
+window.addEventListener('resize', () => { renderDesktop(); });
 </script>
 </body>
 </html>

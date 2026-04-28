@@ -136,11 +136,14 @@ function buildCard(card) {
 }
 
 let desktopPage = 0;
+const isTabletPortrait = () => window.innerWidth >= 701 && window.innerWidth <= 1024 && window.matchMedia("(orientation: portrait)").matches;
+
 const desktopPages = [[cards[0], cards[1]], [cards[2], cards[3]]];
 
 function renderDesktop() {
-    document.getElementById('desktop-grid').innerHTML = desktopPages[desktopPage].map(buildCard).join('');
-    document.getElementById('desktop-counter').textContent = (desktopPage + 1) + ' / ' + desktopPages.length;
+    const pageCards = isTabletPortrait() ? [cards[0], cards[1], cards[2], cards[3]] : desktopPages[desktopPage];
+    document.getElementById('desktop-grid').innerHTML = pageCards.map(buildCard).join('');
+    document.getElementById('desktop-counter').textContent = isTabletPortrait() ? '' : (desktopPage + 1) + ' / ' + desktopPages.length;
 }
 
 function desktopNav(dir) {
@@ -203,6 +206,6 @@ function initTouch() {
 }
 
 window.addEventListener('load', () => { renderDesktop(); buildMobileCards(); initTouch(); });
-</script>
+window.addEventListener('resize', () => { renderDesktop(); });</script>
 </body>
 </html>

@@ -6,14 +6,14 @@
 <meta property="og:title" content="Sharad Kumar | Operating at the intersection of Go-to-market, Technology & Delivery" />
 <meta property="og:description" content="Enterprise leader driving GTM strategy, Technology & Operate solutions and building high-performance global teams delivering measurable business outcomes." />
 <meta name="description" content="Specializing in AI, Cloud and Digital Transformation." />
-<meta property="og:image" content="sharad-kum.github.io/image.jpg" />
+<meta property="og:image" content="https://sharad-kum.github.io/og-image.png" />
 <meta property="og:url" content="https://Shark280266.github.io/" />
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="" />
+<meta property="og:site_name" content="Sharad Kumar" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="author" content="Sharad Kumar" />
 <meta property="article:published_time" content="2026-03-31T00:00:00Z" />
-<title>Sharad Kumar | Portfolio - Growth, Solution & Delivery Leadership</title>
+<title>Sharad Kumar | Shaping Markets, Technology and Delivery</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
@@ -385,6 +385,19 @@
 
     /* swipe-more link visible on compact */
     #swipe-more { display: block; }
+
+    /* Engage icons: horizontal row on compact */
+    .engage-icons {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 12px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+
+.engage-icons a span {
+    font-size: 11px;
 }
 
 /* --- Landscape override for impact only --- */
@@ -600,7 +613,7 @@ let currentCard = 0;
 function renderDesktop(s) {
     const item = data[s][idx[s]];
     document.getElementById('d-' + s + '-title').textContent = item.title;
-    document.getElementById('d-' + s + '-desc').innerHTML = item.desc.replace(/\n/g, '<br>');
+    document.getElementById('d-' + s + '-desc').innerHTML = item.desc.replace(/\n/g, '<br><br>');
     document.getElementById('d-' + s + '-counter').textContent = (idx[s] + 1) + '/' + data[s].length;
 }
 
@@ -619,7 +632,7 @@ function buildSwipeCards() {
         div.innerHTML = `
             <div class="swipe-card-section">${card.section}</div>
             <div class="swipe-card-title">${card.title}</div>
-            <div class="swipe-card-desc">${card.desc.replace(/\n/g, '\n')}</div>`;
+            <div class="swipe-card-desc">${card.desc.replace(/\n/g, '\n\n')}</div>`;
         track.appendChild(div);
     });
     updateSwipe();

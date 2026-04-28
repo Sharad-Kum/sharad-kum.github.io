@@ -134,11 +134,11 @@ const isTabletPortrait = () => window.innerWidth >= 701 && window.innerWidth <= 
 const desktopPages = [[cards[0], cards[1]], [cards[2], cards[3]]];
 
 function renderDesktop() {
-    const cards = isTabletPortrait() ? [cards[0], cards[1], cards[2], cards[3]] : desktopPages[desktopPage];
-    document.getElementById('desktop-grid').innerHTML = cards.map(buildCard).join('');
+    const pageCards = isTabletPortrait() ? [cards[0], cards[1], cards[2], cards[3]] : desktopPages[desktopPage];
+    document.getElementById('desktop-grid').innerHTML = pageCards.map(buildCard).join('');
     document.getElementById('desktop-counter').textContent = isTabletPortrait() ? '' : (desktopPage + 1) + ' / ' + desktopPages.length;
 }
-
+    
 function desktopNav(dir) {
     desktopPage = (desktopPage + dir + desktopPages.length) % desktopPages.length;
     renderDesktop();

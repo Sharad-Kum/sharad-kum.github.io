@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sharad Kumar | Growth & GTM</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=ad0dace5">
 </head>
 <body>
 <div class="sub-page-container">
@@ -15,16 +15,28 @@
         <div class="side-block"></div>
         <div class="header-center">
             <h1>SHARAD KUMAR</h1>
-            <p class="tagline">Operating at the intersection of Markets, Technology and Delivery</p>
+            <p class="tagline">Orchestrating Markets, Solutions &amp; Delivery</p>
         </div>
         <div class="side-block">
             <svg viewBox="0 0 120 120" width="80" height="80">
                 <defs><path id="bottom-arc" d="M 15,60 A 45,45 0 0,0 105,60"/></defs>
-                <image href="logo.png" x="20" y="15" width="80" height="80" style="filter: brightness(2.5) saturate(3) hue-rotate(5deg);"/>
-                <text font-size="11" fill="#d4af37" font-family="Segoe UI, sans-serif" font-weight="500" letter-spacing="2">
+                <image href="logo.png" x="20" y="15" width="80" height="80"/>
+                <text font-size="12" style="fill:var(--clay);font-family:var(--font-body);" font-weight="700" letter-spacing="2">
                     <textPath href="#bottom-arc">Addicted to Results</textPath>
                 </text>
             </svg>
+        </div>
+    </div>
+
+<div class="mywork-scroll">
+
+    <!-- INTRO NARRATIVE -->
+    <div class="intro-sub">
+        <p class="page-title">Go-To-Market &amp; Growth</p>
+        <div class="intro-grid">
+            <div class="intro-col">Implemented AI assisted pursuit strategy and joint GTM frameworks converting pipeline into sustained outcomes.</div>
+            <div class="intro-col">Built AI enabled market intelligence and GTM strategy to sharpen qualification and win rates.</div>
+            <div class="intro-col">Amplified demand generation via thought leadership and improved awareness across geographies.</div>
         </div>
     </div>
 
@@ -32,9 +44,8 @@
     <div class="sub-carousel-section">
 
         <div class="page-header-row">
-            <div class="page-section-title">Key GTM Approaches</div>
-            <a href="index.html"><i class="fas fa-arrow-up"></i> Back to Main</a>
-        </div>
+            <div class="page-sub-title" id="section-title">Key Highlights</div>
+            </div>
 
         <!-- Wide: two-column grid -->
         <div class="sub-carousel-desktop">
@@ -55,25 +66,30 @@
                 </div>
                 <div class="sub-swipe-sidebar right" onclick="mobileNav(1)">&#8594;</div>
             </div>
-            <div class="sub-swipe-counter" id="mobile-counter">1 / 4</div>
+            <div class="sub-mobile-footer">
+                <span class="sub-swipe-counter" id="mobile-counter">1 / 4</span>
+                <a href="mywork.html" class="back-to-main-inline"><i class="fas fa-arrow-up"></i> Back to My Work</a>
+            </div>
         </div>
 
     </div>
 
     <!-- ADDITIONAL SECTION -->
     <div class="extra-section">
-        <div class="page-section-title">Additional GTM Approaches</div>
-        <ul class="extra-list">
-            <li>Designing pilot-led market entry models that allow validation of value propositions and pricing before committing to a scaled rollout</li>
-            <li>Aligning operating cadence across product, sales and delivery teams to ensure disciplined and synchronized GTM execution</li>
-            <li>Embedding governance structures and decision frameworks to continuously adapt GTM strategy in alignment to dynamic market signals and performance data</li>
-        </ul>
+        <div class="page-sub-title">Additional GTM Highlights</div>
+        <div class="extra-grid">
+            <div class="extra-box">Negotiated enterprise license agreements with global &amp; regional partners, operationalizing joint GTM, SaaS hosting and pay-per-use commercial models.</div>
+            <div class="extra-box">Led GTM strategy alignment across markets during a large-scale organizational merger, sustaining growth continuity through integration.</div>
+            <div class="extra-box">Contributed to a cloud-industry workgroup, positioning the organization ahead in futuristic, market-expansion-ready solutions.</div>
+        </div>
     </div>
 
-    <!-- BACK TO MAIN -->
+    <!-- BACK TO MAIN (desktop position — hidden on mobile, where it's combined with the pagination counter above) -->
     <div class="back-to-main">
-        <a href="index.html"><i class="fas fa-arrow-up"></i> Back to Main</a>
+        <a href="mywork.html"><i class="fas fa-arrow-up"></i> Back to My Work</a>
     </div>
+
+</div><!-- end .mywork-scroll -->
 
 </div><!-- end .sub-page-container -->
 
@@ -124,88 +140,8 @@ const cards = [
         outcome: "30% qualified leads ↑ | 20% pipeline growth | 15–20% brand uplift"
     }
 ];
+</script>
+<script src="subpage.js?v=2c515640"></script>
 
-function buildCard(card) {
-    return `<div class="sub-card">
-        <h3>${card.title}</h3>
-        <div class="sub-mandate">Mandate: ${card.mandate}</div>
-        <div class="sub-narrative">${card.narrative}</div>
-        <ul>${card.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
-        <div class="sub-outcome">${card.outcome}</div>
-    </div>`;
-}
-
-let desktopPage = 0;
-const isTabletPortrait = () => window.innerWidth >= 701 && window.innerWidth <= 1024 && window.matchMedia("(orientation: portrait)").matches;
-
-const desktopPages = [[cards[0], cards[1]], [cards[2], cards[3]]];
-
-function renderDesktop() {
-    const pageCards = isTabletPortrait() ? [cards[0], cards[1], cards[2], cards[3]] : desktopPages[desktopPage];
-    document.getElementById('desktop-grid').innerHTML = pageCards.map(buildCard).join('');
-    document.getElementById('desktop-counter').textContent = isTabletPortrait() ? '' : (desktopPage + 1) + ' / ' + desktopPages.length;
-}
-
-function desktopNav(dir) {
-    desktopPage = (desktopPage + dir + desktopPages.length) % desktopPages.length;
-    renderDesktop();
-}
-
-let mobileCard = 0;
-
-function buildMobileCards() {
-    const track = document.getElementById('mobile-track');
-    if (!track) return;
-    track.innerHTML = '';
-    cards.forEach(card => {
-        const div = document.createElement('div');
-        div.className = 'sub-card';
-        div.style.cssText = 'min-width:100%;max-width:100%;flex-shrink:0;box-sizing:border-box;';
-        div.innerHTML = `<h3>${card.title}</h3>
-            <div class="sub-mandate">Mandate: ${card.mandate}</div>
-            <div class="sub-narrative">${card.narrative}</div>
-            <ul>${card.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
-            <div class="sub-outcome">${card.outcome}</div>`;
-        track.appendChild(div);
-    });
-    updateMobile();
-}
-
-function updateMobile() {
-    const track = document.getElementById('mobile-track');
-    const counter = document.getElementById('mobile-counter');
-    if (!track || !counter) return;
-    track.style.transform = `translateX(${-mobileCard * 100}%)`;
-    counter.textContent = (mobileCard + 1) + ' / ' + cards.length;
-}
-
-function mobileNav(dir) {
-    mobileCard = (mobileCard + dir + cards.length) % cards.length;
-    updateMobile();
-}
-
-let touchStartX = 0;
-
-function initTouch() {
-    const track = document.getElementById('mobile-track');
-    if (track) {
-        track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-        track.addEventListener('touchend', e => {
-            const diff = touchStartX - e.changedTouches[0].clientX;
-            if (Math.abs(diff) > 40) mobileNav(diff > 0 ? 1 : -1);
-        }, { passive: true });
-    }
-    const grid = document.getElementById('desktop-grid');
-    if (grid) {
-        grid.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-        grid.addEventListener('touchend', e => {
-            const diff = touchStartX - e.changedTouches[0].clientX;
-            if (Math.abs(diff) > 40) desktopNav(diff > 0 ? 1 : -1);
-        }, { passive: true });
-    }
-}
-
-window.addEventListener('load', () => { renderDesktop(); buildMobileCards(); initTouch(); });
-window.addEventListener('resize', () => { renderDesktop(); });</script>
 </body>
 </html>

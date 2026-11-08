@@ -50,7 +50,8 @@ const NEWSLETTERS = [
           {no: "Edition 3", title: "Who holds the brake", date: "10 Oct 2026", summary: "Safety insiders are leaving with public warnings.", url: "SignalSheet_E3.html"},
           {no: "Edition 4", title: "Disclosures are not optional", date: "17 Oct 2026", summary: "Enforcers are moving ahead of the rules.", url: "SignalSheet_E4.html"},
           {no: "Edition 5", title: "The limits are beyond AI Chips", date: "24 Oct 2026", summary: "AI chip demand still outruns supply.", url: "SignalSheet_E5.html"},
-          {no: "Edition 6", title: "Capital runs ahead of cash", date: "31 Oct 2026", summary: "AI build-outs are being funded before revenue covers them.", url: "SignalSheet_E6.html"}
+          {no: "Edition 6", title: "Capital runs ahead of cash", date: "31 Oct 2026", summary: "AI build-outs are being funded before revenue covers them.", url: "SignalSheet_E6.html"},
+          {no: "Edition 7", title: "Is capital meeting its limit?", date: "7 Nov 2026", summary: "Investors are pricing AI spend by who can fund it.", url: "SignalSheet_E7.html"}
         ] }
     ]
   }

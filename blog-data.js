@@ -31,7 +31,8 @@ const NEWSLETTERS = [
         note: "What has actually changed, what it changes, who supervises these systems, and how roles are shifting.",
         editions: [
           {no: "Edition 9", title: "AI Platforms: Who Is Deciding the Leadership?", date: "28 Oct 2026", summary: "The scoreboards disagree on who leads.", url: "ConnectingTheDots_S2_E9.html"},
-          {no: "Edition 10", title: "What Decides Leadership?", date: "4 Nov 2026", summary: "Arriving first gives a head start. Leadership goes to whoever does the job better.", url: "ConnectingTheDots_S2_E10.html"}
+          {no: "Edition 10", title: "What Decides Leadership?", date: "4 Nov 2026", summary: "Arriving first gives a head start. Leadership goes to whoever does the job better.", url: "ConnectingTheDots_S2_E10.html"},
+          {no: "Edition 11", title: "AI Platforms: How Stable Is the Leadership?", date: "11 Nov 2026", summary: "Winning the big buyers earns leadership. Spreading the revenue keeps it.", url: "ConnectingTheDots_S2_E11.html"}
         ] }
     ]
   },
@@ -51,7 +52,8 @@ const NEWSLETTERS = [
           {no: "Edition 4", title: "Disclosures are not optional", date: "17 Oct 2026", summary: "Enforcers are moving ahead of the rules.", url: "SignalSheet_E4.html"},
           {no: "Edition 5", title: "The limits are beyond AI Chips", date: "24 Oct 2026", summary: "AI chip demand still outruns supply.", url: "SignalSheet_E5.html"},
           {no: "Edition 6", title: "Capital runs ahead of cash", date: "31 Oct 2026", summary: "AI build-outs are being funded before revenue covers them.", url: "SignalSheet_E6.html"},
-          {no: "Edition 7", title: "Is capital meeting its limit?", date: "7 Nov 2026", summary: "Investors are pricing AI spend by who can fund it.", url: "SignalSheet_E7.html"}
+          {no: "Edition 7", title: "Is capital meeting its limit?", date: "7 Nov 2026", summary: "Investors are pricing AI spend by who can fund it.", url: "SignalSheet_E7.html"},
+          {no: "Edition 8", title: "AI Labs Sued, Still Releasing", date: "14 Nov 2026", summary: "Nvidia has an interim CEO, five AI developers are sued, and new models keep shipping.", url: "SignalSheet_E8.html"}
         ] }
     ]
   }
